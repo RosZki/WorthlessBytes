@@ -1,0 +1,798 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Game List</title>
+<script src="jquery-2.1.3.min.js"></script>
+		<script src="jquery-ui.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>	
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+<style>
+	
+	html, body, form{
+		height:100%;
+	}
+	
+	body{
+		margin: 0px;
+		padding: 0px;
+		height: 100%;
+		background-color: #DBEEEB;
+	}
+	
+		.container {
+			position: relative;
+			text-align: center;
+			width: 100%;
+			background-color: #DBEEEB;
+		}
+		
+		.buttonDesign1:hover{
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #44bfa7;
+		color: #FFFFF;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 2px;
+	}
+	
+	.buttonDesign1{		
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #FFFFFF;
+		color: #0b5d4d;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		padding: 1px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 1px;
+	}
+		
+		.buttonDesign:hover{
+			display: block;
+			margin:0 auto; 
+			float: right;
+			background: #44bfa7;
+			color: #FFFFF;
+			font-family: Abs;
+			opacity: 1.0;
+			font-size: 25px;
+			width: 150px;
+			min-width: 90px;
+			border:0.5px solid rgba(0,0,0,0.098);
+			border-radius: 2px;
+		}
+		
+		.currentButton{
+			display: block;
+			margin:0 auto; 
+			float: right;
+			background: #44bfa7;
+			color: #fffff;
+			font-family: Abs;
+			opacity: 1.0;
+			font-size: 25px;
+			width: 150px;
+			padding: 2px;
+			min-width: 90px;
+			border:0.5px solid rgba(0,0,0,0.098);
+			border-radius: 1px;
+		}
+		
+		.buttonPane{
+			position: absolute;
+			float: right;
+			display: inline-block;
+			right: 1.5%;
+			height: 50px;
+			top: 50px;
+			padding: 2px;
+			margin: auto;
+			text-align: center;	
+			}
+			
+		.buttonDesign{		
+			display: block;
+			margin:0 auto; 
+			float: right;
+			background: #FFFFFF;
+			color: #0b5d4d;
+			font-family: Abs;
+			opacity: 1.0;
+			font-size: 25px;
+			width: 150px;
+			padding: 2px;
+			min-width: 90px;
+			border:0.5px solid rgba(0,0,0,0.098);
+			border-radius: 1px;
+		}
+		
+		.logoPane{
+			position: relative;
+			float: left;
+			top: 2px;
+			bottom: 10px;
+			left: 50px;
+			width: 300px;
+			height: 80px;
+			background-image: url(/assets/logo.png);
+		}
+	
+	.userPane{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		border-radius: 10px;
+		background-color: #00a887;
+	}
+	
+		
+		.userCirclePane{
+			position: relative;
+			float: center;
+			width: 50px;
+			height: 50px;
+			left: 10px;
+			top: 10px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 50px 50px;
+			background-image: url(/assets/circle.png);
+		}
+		
+		.headerLine{
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 10px;
+			background-color: #00a887;
+		}
+		
+		.header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100px;
+			background-color: white;
+			width: 100%;
+		}
+
+		.headerCont {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100px;
+		background-color: white;
+		width: 100%;
+	}
+	
+		.outerTextPane{
+			position: absolute;
+			top: 160px;
+			left: -50%;
+		}
+		
+		.loginPane{
+			position: relative;
+			width: 75%;
+			height: 75%;
+			margin: auto;
+			text-align: center;
+			background: rgba(0, 0, 0, 0.45);
+		}
+		
+		.textPane{
+			position:absolute;
+			left:0;
+			top: 31%;
+			right:0;
+			margin-left:auto;
+			margin-right:auto;
+			font-size: 40px;
+			font-family: Pen;
+			font-size: 60px;
+			background-color: white;
+			margin: 0 auto;
+		}
+		
+		.smallTextPane{
+			position:absolute;
+			left:0;
+			top: 44%;
+			right:0;
+			margin-left:auto;
+			margin-right:auto;
+			font-family: AbsThick;
+			font-size: 40px;
+			background-color: white;
+			margin: auto;
+			text-align: center;
+		}
+
+
+
+		.gamePieceContainer{
+			positiion: relative;
+			float: left;
+			height: 50%;
+			width: 32.5%;
+			margin: 5px;
+			background-color: #DBEEEB;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			}
+		
+		
+		.gamePiece{
+			position: relative;
+			width: 100%;
+			height: 80%;
+			float: left;
+			text-align: left;
+			background-size: cover;
+			background-image: url(/assets/gameDefault.jpg); 
+		}
+		
+		.gameInfo{
+			display: none;
+		}
+		
+		.gamePiece:hover .gameInfo{
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 100%;
+			float: left;
+			text-align: left;
+			background: rgba(0, 0, 0, 0.8);
+		}
+		
+		.gameNameText{
+			position: relative;
+			bottom: 20px;
+			float: left;
+			top: -55px;
+			height: 40px;
+			background: rgba(255, 255, 255, .3);
+			width: 100%;
+		}	
+		
+		.gameNameProper{
+			position: relative;
+			top: 50%;
+			text-align: left;
+			transform: 			translateY(-50%);
+			font-family: AbsThick;
+			font-size: 38px;
+		}
+
+		.gameDescription{
+			position: absolute;
+			height: 100px;
+			width: 98%;
+			top: 20px;
+			left: 5px;
+			font-family: RaleReg;
+			font-size: 15px;
+		}
+		
+		.gameRating{
+			font-family: AbsThick;
+			font-size: 22px;
+			position: relative;
+			float: left;
+			width: 100%;
+			text-align: left;
+			top: -28px;
+		}
+		
+		::-webkit-scrollbar { 
+			display: none; 
+		}
+		
+		.gameGenre{
+			font-family: RaleReg;
+			font-size: 18px;
+			text-align: left;
+			position: relative;
+			top: -22px;
+			width: 100%;
+			float: left;
+		}
+		
+		.scrollContainer{
+			position: relative;
+			top: 90px;
+			padding: vertical horizontal;
+			width: 100%;
+			height: 88%;
+			margin: auto;
+			background-color: #DBEEEB;
+		}
+
+		.scrollPane{
+			position: relative;
+			padding: vertical horizontal;
+			width: 100%;
+			margin: auto;
+			height: 95%;
+			top: 10px;
+			line-height: 1em;
+			overflow: auto;
+			background-color: #DBEEEB;
+		}
+
+		.gameDetailPane{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			bottom: 50px;
+		}
+
+		.gameListBox{
+				position: relative;
+				float: left;
+				top: 50px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				margin-left: 5px;
+				margin-right: 5px;
+				width: 45%;
+			}
+			
+			.gameListDetailBox{
+				position: relative;
+				float: left;
+				width: 100%;
+			}
+			
+			.gameListBoxIcon{
+				float: left;
+				margin-top: 2.5px;
+				margin-bottom: 2.5px;
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+			
+			.gameDetails{
+				position: relative;
+				top: 50%;
+				transform: 			translateY(-50%);
+			}
+			
+			.gameListBoxIcon .publisher{
+				background-image: url(/assets/notebook1.png);
+				width: 40px;
+				height: 40px;
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			
+			.gameListBoxIcon .developer{
+				background-image: url(/assets/developer1.png);
+				width: 40px;
+				height: 40px;
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			
+			.gameListBoxIcon .console{
+				background-image: url(/assets/gamePad1.png);
+				background-repeat: no-repeat;
+				width: 40px;
+				background-position: center;
+				height: 40px;
+				background-size: contain;
+			}
+			
+			.gameListBoxPublisher{
+				float: left;
+				text-align: left;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				margin-left: 5px;
+				margin-right: 5px;
+				width: 60%;
+			}
+			
+			.gameListBoxIcon .year{
+				background-image: url(/assets/timeTable1.png);
+				background-repeat: no-repeat;
+				width: 40px;
+				background-position: center;
+				height: 40px;
+				background-size: contain;
+			}
+			
+			.gameDetail{
+				position: relative;
+				float: left;
+				font-family: RaleMed;
+				font-size: 20px;
+				width: 100%;
+			}
+			
+			.gameDetailValue{
+				position: relative;
+				width: 100%;
+				float: left;
+				font-family: RaleReg;
+				font-size: 11px;
+			}
+			
+	.goButton{
+		display: inline-block;
+		margin:10px auto; 
+		top: 5px;
+		background: #44bfa7;
+		color: #FFFFF;;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		clear:both;
+		width: 150px;
+		padding: 0;
+		min-width: 90px;
+		border:5px solid rgba(0,0,0,0);
+		border-radius: 2px;
+	}
+			
+	.userText{
+		position: relative;
+		float: center;
+		margin: 10px;
+		font-family: 'RaleReg';
+		font-size: 20px;
+	}
+	
+	.textDesign1{
+		width: 200px;
+		position: relative;
+		float: center;
+		padding: 2px;
+		font-family: Normal;
+		font-size: 20px;
+		background: #44bfa7;
+		color: #fff;
+		margin-left: 10px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		text-decoration: none;
+		padding: 4 0em;
+		line-height: 0em;
+	}
+	
+	#loginButton{
+		height:61%;
+	}
+	
+	.btn-file {
+	  position: relative;
+	  overflow: hidden;
+	}
+	.btn-file input[type=file] {
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  min-width: 100%;
+	  min-height: 100%;
+	  font-size: 100px;
+	  text-align: right;
+	  filter: alpha(opacity=0);
+	  opacity: 0;
+	  background: red;
+	  cursor: inherit;
+	  display: block;
+	}
+	input[readonly] {
+	  background-color: white !important;
+	  cursor: text !important;
+	}
+	
+	.btn{
+		background: #44bfa7;
+		color: #FFFFF;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 20px;
+		width: 150px;
+		padding: 2.5px 12px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+	}
+	
+	.ui-datepicker {
+		background-color: #fff;
+		border: 1px solid #66AFE9;
+		border-radius: 4px;
+		box-shadow: 0 0 8px rgba(102,175,233,.6);
+		display: none;
+		margin-top: 4px;
+		padding: 10px;
+		width: 340px;
+	}
+	.ui-datepicker a,
+	.ui-datepicker a:hover {
+		text-decoration: none;
+	}
+	.ui-datepicker a:hover,
+	.ui-datepicker td:hover a {
+		color: #2A6496;
+		-webkit-transition: color 0.1s ease-in-out;
+		   -moz-transition: color 0.1s ease-in-out;
+			 -o-transition: color 0.1s ease-in-out;
+				transition: color 0.1s ease-in-out;
+	}
+	.ui-datepicker .ui-datepicker-header {
+		margin-bottom: 4px;
+		text-align: center;
+	}
+	.ui-datepicker .ui-datepicker-title {
+		font-weight: 700;
+	}
+	.ui-datepicker .ui-datepicker-prev,
+	.ui-datepicker .ui-datepicker-next {
+		cursor: default;
+		font-family: 'Glyphicons Halflings';
+		-webkit-font-smoothing: antialiased;
+		font-style: normal;
+		font-weight: normal;
+		height: 20px;
+		line-height: 1;
+		margin-top: 2px;
+		width: 30px;
+	}
+	.ui-datepicker .ui-datepicker-prev {
+		float: left;
+		text-align: left;
+	}
+	.ui-datepicker .ui-datepicker-next {
+		float: right;
+		text-align: right;
+	}
+	.ui-datepicker .ui-datepicker-prev:before {
+		content: "\e079";
+	}
+	.ui-datepicker .ui-datepicker-next:before {
+		content: "\e080";
+	}
+	.ui-datepicker .ui-icon {
+		display: none;
+	}
+	.ui-datepicker .ui-datepicker-calendar {
+	  table-layout: fixed;
+		width: 100%;
+	}
+	.ui-datepicker .ui-datepicker-calendar th,
+	.ui-datepicker .ui-datepicker-calendar td {
+		text-align: center;
+		padding: 4px 0;
+	}
+	.ui-datepicker .ui-datepicker-calendar td {
+		border-radius: 4px;
+		-webkit-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+		   -moz-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+			 -o-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+				transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+	}
+	.ui-datepicker .ui-datepicker-calendar td:hover {
+		background-color: #eee;
+		cursor: pointer;
+	}
+	.ui-datepicker .ui-datepicker-calendar td a {
+		text-decoration: none;
+	}
+	.ui-datepicker .ui-datepicker-current-day {
+		background-color: #4289cc;
+	}
+	.ui-datepicker .ui-datepicker-current-day a {
+		color: #fff
+	}
+	.ui-datepicker .ui-datepicker-calendar .ui-datepicker-unselectable:hover {
+		background-color: #fff;
+		cursor: default;
+	}
+			
+		@font-face{
+			font-family: Pen;
+			src: url(/assets/Raleway-Thin.ttf);
+		}
+		
+		@font-face{
+			font-family: AbsThick;
+			src: url(/assets/Raleway-Bold.ttf);
+		}
+		
+		@font-face{
+			font-family: Abs;
+			src: url(/assets/AbsoThin.ttf);
+		}
+		
+		@font-face{
+			font-family: RaleReg;
+			src: url(/assets/Raleway-Light.ttf);
+		}
+		
+		@font-face{
+			font-family: RaleMed;
+			src: url(/assets/Raleway-Medium.ttf);
+		}
+		
+		@font-face{
+			font-family: Cane;
+			src: url(/assets/Pam.ttf);
+		}
+		
+		div{
+			font-family: RaleReg;
+			font-size: 20px;
+		}
+
+		form{
+			display: inline-block;
+			position: relative;
+			left: 5px;
+		}
+		
+	</style>
+	
+	<script src="jquery-2.1.3.min.js"></script>
+	<script src="jquery-ui.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#login').on('click',function(){
+					$('.header').toggle('slide',{direction: "up"},500);
+				});
+				$('#cancelButton').on('click',function(){
+					$('.header').toggle('slide',{direction: "up"},500);
+				});
+				  $(function() {
+					$( "#datetimepicker1" ).datepicker();
+				  });
+				$(document).on('change', '.btn-file :file', function() {
+				  var input = $(this),
+					  numFiles = input.get(0).files ? input.get(0).files.length : 1,
+					  label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+				  input.trigger('fileselect', [numFiles, label]);
+				});
+
+				$(document).ready( function() {
+					$('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+						
+						var input = $(this).parents('.input-group').find(':text'),
+							log = numFiles > 1 ? numFiles + ' files selected' : label;
+						
+						if( input.length ) {
+							input.val(log);
+						} else {
+							if( log ) alert(log);
+						}
+						
+					});
+				});
+			});
+	</script>
+</head>
+<body>
+			<div class="container" style = "top: 15%">
+			  <h2>Add a Game</h2>
+			  <%= form_for @game, html: { multipart: true, class: "form-horizontal", style: "width: 80%;" } do |game| %>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="name">Name:</label>
+				  <div class="col-sm-10">
+					<%= game.text_field :name, class: "form-control", value: "Enter Name", onclick:"this.setSelectionRange(0, this.value.length)"%>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="publisher">Publisher:</label>
+				  <div class="col-sm-10">          
+					<%= game.text_field :publisher, class: "form-control", value: "Enter Publisher", onclick:"this.setSelectionRange(0, this.value.length)"%>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="developer">Developer:</label>
+				  <div class="col-sm-10">
+					<%= game.text_field :developer, class: "form-control", value: "Enter Developer",onclick:"this.setSelectionRange(0, this.value.length)"%>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="datetimepicker1">Date Released:</label>
+				  <div class="col-sm-10">          
+					<%= game.text_field :year, class: "form-control", id: "datetimepicker1", value: "Enter Date",onclick:"this.setSelectionRange(0, this.value.length)"%>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="platform">Platform:</label>
+				  <div class="col-sm-10">
+					<%= game.text_field :platform, class: "form-control", value: "Enter Platform",onclick:"this.setSelectionRange(0, this.value.length)"%> 
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="genre">Genre:</label>
+				  <div class="col-sm-10">          
+					<%= game.text_field :genre, class: "form-control", value: "Enter Genre",onclick:"this.setSelectionRange(0, this.value.length)"%>
+				  </div>
+				</div>
+				 <div class="form-group">
+				  <label for="comment">Description:</label>
+					<%= game.text_area :description, class: "form-control", rows: "5", value: "Enter Description",onclick:"this.setSelectionRange(0, this.value.length)"%>
+				</div>
+				<div class="input-group">
+				
+                <span class="input-group-btn">
+                    <span class="btn btn-primary btn-file">
+                        Browse&hellip; <%= game.file_field :gameposter%>
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly placeholder="Upload a file">
+				</div>
+					<button type="submit" class="goButton">Submit</button>
+			  <% end %>
+			</div>
+
+			
+			<% if session[:user_id] == nil %>
+			<div class = 'headerCont'>
+			<div class = 'headerPane'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane'></div>
+				<div class = 'buttonPane'>
+				<%= form_tag("/login", method: :post) do %><font color = '#0b5d4d'>
+						Username:
+						<input name="username" type="text" class = 'textDesign1' id="ratingSummary">
+						Password:
+						<input name="password" type="password" class = 'textDesign1' id="ratingSummary">
+						</font>
+					<input type='submit' class = 'buttonDesign1' id = 'loginButton' value='Login'>
+				<% end %>
+					<div class = 'buttonDesign1' id = 'cancelButton'>Cancel</div>
+				</div>
+			</div>
+			<div class = 'header'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane' onclick="document.location.href='/'"></div>
+				<div class = 'buttonPane'>
+					<form>
+					<div class = 'currentButton' onclick ='document.forms["gamelist-form"].submit();'>Game List</div>
+					</form>
+					<form>
+					<div class = 'buttonDesign' id = 'login'>Login</div>
+					</form>
+					<form name='register-form' action='register' method="GET">
+					<div class = 'buttonDesign' onclick ='document.forms["register-form"].submit();'>Register</div>
+					</form>
+				</div>
+				
+					
+			</div>
+			<%  end %>
+			<% if session[:user_id] != nil %>
+			<div class = 'header'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane' onclick="document.location.href='/'"></div>
+				<div class = 'buttonPane'>
+					<div class = 'buttonDesign' onclick = "window.location.href='/logout';">Logout</div>
+					<div class = 'buttonDesign' onclick= "window.location.href='/profile'">My Profile</div>
+					<div class = 'currentButton'>Game List</div>
+				</div>
+				<div class = 'userPane'><div class = 'userText'><font color = 'white'>Welcome, <%= session[:user_name] %></font></div></div>
+			</div>
+			<% end %>
+
+</body>
+</html>

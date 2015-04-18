@@ -1,0 +1,1145 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Home</title>
+<style>
+	
+	html, body{
+		height:100%;
+	}
+
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.container {
+		position: relative;
+		text-align: center;
+		width: 100%;
+		height: 200%;
+		background-color: 'white';
+	}
+	
+	table{table-layout: fixed;
+	width: 90%;}
+	
+	td {
+		overflow: hidden;
+		width: 25%;
+	}
+	
+	label{float:left;}
+	
+	.logoPane{
+		position: relative;
+		float: left;
+		top: 2px;
+		bottom: 10px;
+		left: 50px;
+		width: 300px;
+		height: 80px;
+		background-image: url(/assets/logo.png);
+	}
+	
+	::-webkit-scrollbar { 
+		display: none; 
+	}
+	
+	.userPane{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		border-radius: 10px;
+		background-color: #00a887;
+	}
+
+	.searchPane{
+		position: relative;
+		float: center;
+		top: 100px;
+		width: 100%;
+		height: 290px;
+		background-color: #d2eae6;
+	}
+	
+	.squareRelContainer{
+		margin-top: 10px;
+		position: relative;
+		float: right;
+		width: 24.8%;
+		height: 252px;
+		background-color: #ebf9f7;
+	}
+	
+	.platformPane{
+		margin-top: 85px;
+		position: absolute;
+		width: 100%;
+		height: 250px;
+		background-color: white;
+	}
+	
+	.squareRelPane{
+		margin-top: 10px;
+		position: relative;
+		float: right;
+		background-color: #ebf9f7;
+		width: 24.8%;
+		height: 252px;
+	}
+	
+	.squareAbsPane{
+		position: absolute;
+		float: right;
+		width: 100%;
+		height: 250px;
+		background-color: #ebf9f7;
+		 -webkit-transition: background-color 0.5s ease-out;
+	  -moz-transition: background-color 0.5s ease-out;
+	  -o-transition: background-color 0.5s ease-out;
+	  transition: background-color 0.5s ease-out;
+	}
+	
+	.squareAbsPane1{
+		position: absolute;
+		float: right;
+		width: 100%;
+		height: 250px;
+		background-color: white;
+	}
+	
+	.squareContainerPane{
+		position: absolute;
+		float: right;
+		top: 20%;
+		width: 100%;
+		height: 85%;
+		 -webkit-transition: background-color 0.5s ease-out;
+	  -moz-transition: background-color 0.5s ease-out;
+	  -o-transition: background-color 0.5s ease-out;
+	  transition: background-color 0.5s ease-out;
+	}
+	
+	.controllerPane{
+		position: absolute;
+		left:0;
+		right:0;
+		margin-left:auto;
+		text-align: center;
+		margin-right:auto;
+		width: 100%;
+		height: 365px;
+		vertical-align: center;
+		background-color: #ebf9f7;
+	}
+	
+	.controlPane{
+		position:relative;
+		left:0;
+		right:0;
+		top: 0px;
+		margin-left:auto;
+		margin-right:auto;
+		text-align: center;
+		width: 100%;
+		height: 365px;
+		background-color: #ebf9f7;
+	}
+	
+	.newsPane{
+		position: relative;
+		float: center;
+		width: 100%;
+		height: 42%;
+		background: url(/assets/background2.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	
+	.newsSlides{
+		position: relative;
+		float: center;
+		margin: auto;
+		width: 100%;
+		top: 15%;
+		height: 60%;
+		background: rgba(255, 255, 255, 0.45);
+	}
+	
+	.newsSlidesText{
+		position: relative;
+		float: center;
+		margin: auto;
+		width: 100%;
+		top: 12%;
+		text-align: center;
+		font-size: 60px;
+		font-family: RaleReg;
+		height: 80px;
+		background: rgba(255, 255, 255, 0.45);
+	}
+	
+	.addLabel{
+		position: relative;
+		float: center;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+	}
+	
+	.headerLine{
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 10px;
+		background-color: #00a887;
+	}
+	
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100px;
+		background-color: white;
+		width: 100%;
+	}
+	
+	.headerPane {
+		position: absolute;
+		height: 100px;
+		background-color: white;
+		width: 100%;
+	}
+	
+	.headerCont {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100px;
+		background-color: white;
+		width: 100%;
+	}
+	
+	.photoPane{
+		position: relative;
+		float: center;
+		top: 100px;
+		width: 100%;
+		height: 25%;
+		background: url(/assets/background.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	
+	.outerTextPane{
+		position: absolute;
+		top: 160px;
+		left: -50%;
+	}
+	
+	.loginPane{
+		position: relative;
+		width: 75%;
+		height: 75%;
+		margin: auto;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.45);
+	}
+	
+	#loginButton{
+		height:61%;
+	}
+	
+	.buttonPane{
+		position: absolute;
+		float: right;
+		display: inline-block;
+		right: 1.5%;
+		height: 50px;
+		top: 50px;
+		padding: 2px;
+		margin: auto;
+		text-align: center;	
+	}
+	
+	.buttonPane1{
+		position: relative;
+		float: right;
+		display: inline-block;
+		right: 80px;
+		height: 50px;
+		top: 50px;
+		padding: 2px;
+		margin: auto;
+		text-align: center;	
+	}
+	
+	.textPane{
+		position:absolute;
+		left:0;
+		top: 0px;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+		font-size: 40px;
+		font-family: Pen;
+		font-size: 60px;
+		background-color: white;
+		margin: 0 auto;
+	}
+	
+	.smallTextPane{
+		position:absolute;
+		left:0;
+		top: 80px;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+		font-family: AbsThick;
+		font-size: 40px;
+		background-color: white;
+		margin: auto;
+		text-align: center;
+	}
+	
+	.bannerText{
+		width: 100%;
+		height: 130px;
+		position: relative;
+		top: 50%;
+		transform: 			translateY(-50%);
+	}
+
+	.genreTextPane{
+		position: relative;
+		float: top;
+		top: 40px;
+		left: 0;
+		right:0;
+		width: 100%;
+		margin-left:auto;
+		margin-right:auto;
+		font-family: AbsThick;
+		font-size: 20px;
+		margin: auto;
+		text-align: center;
+	}
+
+	.genreTypeTextPane{
+		position: relative;
+		float: bottom;
+		left: 0;
+		right:0;
+		top: 40px;
+		width: 100%;
+		margin-left:auto;
+		margin-right:auto;
+		font-family: Pen;
+		font-size: 45px;
+		margin: auto;
+		text-align: center;
+	}
+	
+	.textBox{
+		width: 100%;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	.searchQueryPane{
+		position:absolute;
+		left:0;
+		top: 12%;
+		right:0;
+		height: 75%;
+		margin-left:auto;
+		margin-right:auto;
+		font-family: RaleReg;
+		font-size: 35px;
+		margin: auto;
+		text-align: center;
+	}
+
+	.filterQueryPane{
+		position:absolute;
+		left:0;
+		top: 5%;
+		right:0;
+		width: 1000px;
+		margin-left:auto;
+		margin-right:auto;
+		font-family: Pen;
+		font-size: 35px;
+		margin: auto;
+		text-align: center;
+	}
+	
+	.miniSearchQueryPane{
+		position:absolute;
+		left:0;
+		top: 19%;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+		font-family: Pen;
+		font-size: 30px;
+		margin: auto;
+		text-align: center;
+	}
+	
+	.searchBoxPane{
+		position:absolute;
+		left:0;
+		top: 19%;
+		right:0;
+		margin-left:auto;
+		margin-right: auto;
+		width: 550px;
+		height: 200px;
+	}
+	
+	select {
+	  margin: 15px;
+	  background: white;
+	  width: 200px;
+	  padding: 5px;
+	  font-size: 16px;
+	  line-height: 1;
+	  border: 1px solid black;
+	  border-radius: 0;
+	  height: 34px;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  appearance: none;
+	  background: url(/assets/arrowBlue.png) 96% / 15% no-repeat #eee;
+	}
+
+	.buttonDesign{		
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #FFFFFF;
+		color: #0b5d4d;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		padding: 1px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 1px;
+	}
+	
+	.searchButton{
+		display: block;
+		margin:0 auto; 
+		position: relative;
+		float: right;
+		left: 5px;
+		top: 20%;
+		background: #44bfa7;
+		color: #FFFFF;;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 90px;
+		padding: 0;
+		min-width: 90px;
+		border:5px solid rgba(0,0,0,0);
+		border-radius: 2px;
+	}
+	
+	.goButton{
+		display: inline-block;
+		margin:10px auto; 
+		position: relative;
+		float: center;
+		top: 5px;
+		background: #44bfa7;
+		color: #FFFFF;;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		padding: 0;
+		min-width: 90px;
+		border:5px solid rgba(0,0,0,0);
+		border-radius: 2px;
+	}
+	
+	.genreButton{
+		display: inline-block;
+		margin:10px auto; 
+		position: relative;
+		float: center;
+		top: 20%;
+		background: #44bfa7;
+		color: #FFFFF;;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		padding: 0;
+		min-width: 90px;
+		border:5px solid rgba(0,0,0,0);
+		border-radius: 2px;
+	}
+	
+	
+	.userText{
+		position: relative;
+		float: center;
+		margin: 10px;
+		font-family: 'RaleReg';
+		font-size: 20px;
+	}
+	
+	.textDesign{
+		width: 400px;
+		position: relative;
+		float: center;
+		padding: 2px;
+		font-family: Normal;
+		font-size: 20px;
+		background: #fff;
+		color: #0b5d4d;
+		top: 20%;
+		border:0.5px solid rgba(0,0,0,0.098);
+		text-decoration: none;
+		padding: 0 1em;
+		line-height: 2em;
+	}
+	
+	.textDesign1{
+		width: 200px;
+		position: relative;
+		float: center;
+		padding: 2px;
+		font-family: Normal;
+		font-size: 20px;
+		background: #44bfa7;
+		color: #fff;
+		margin-left: 10px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		text-decoration: none;
+		padding: 4 0em;
+		line-height: 0em;
+	}
+	
+	.popPane{
+		position: absolute;
+		left:0;
+		top: 10%;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+		width: 1000px;
+		height: 300px;
+	}
+	
+	.popularGamePane{
+		position: relative;
+		float: right;
+		width: 300px;
+		height: 300px;
+	}
+	
+	.gameText{
+		position: relative;
+		float: bottom;
+		width: 200px;
+		height: 100px;
+		font-family: Abs;
+		font-size: 27px;
+	}
+	
+	.popularGamePhoto{
+		position: relative;
+		float: top;
+		width: 200px;
+		height: 200px;
+		background-color: white;
+		background-position: center;
+		background-repeat no-repeat;
+		background-size: cover;
+	}
+	
+	.buttonDesign1:hover{
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #44bfa7;
+		color: #FFFFF;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 2px;
+	}
+	
+	.buttonDesign1{		
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #FFFFFF;
+		color: #0b5d4d;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		padding: 1px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 1px;
+	}
+	
+	.buttonDesign:hover{
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #44bfa7;
+		color: #FFFFF;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 2px;
+	}
+	
+	.gameListBoxIcon{
+		position: relative;
+		left:0;
+		right:0;
+		top: 20%;
+		width: 60px;
+		height: 60px;
+		padding-bottom: 15px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.gameListBoxIcon .genre{
+		background-image: url(/assets/genre.png);
+		background-repeat: no-repeat;
+		width: 60px;
+		height: 60px;
+		background-position: center;
+		background-size: contain;
+	}
+	
+	.gameListBoxIcon .rating{
+		background-image: url(/assets/timeTable.png);
+		background-repeat: no-repeat;
+		width: 60px;
+		height: 60px;
+		background-position: center;
+		background-size: contain;
+	}
+	
+	.gameListBoxIcon .console{
+		background-image: url(/assets/gamePad.png);
+		background-repeat: no-repeat;
+		width: 60px;
+		background-position: center;
+		height: 60px;
+		background-size: contain;
+	}
+	
+	.gameListBoxIcon .year{
+		background-image: url(/assets/calendar.png);
+		background-repeat: no-repeat;
+		width: 60px;
+		background-position: center;
+		height: 60px;
+		background-size: contain;
+	}
+	
+	.gameListBoxPublisher{
+		float: left;
+		text-align: left;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 5px;
+		margin-right: 5px;
+		width: 70%;
+	}
+	
+	.checkBoxPane{
+		left:0;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+	  width: 70%;
+	  padding: 5px;
+	  font-size: 16px;
+	  height: 90%;
+	  -webkit-appearance: none;
+	  color: #000;
+	}
+	
+	.textArea{
+		 background: transparent;
+		left:0;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+	  width: 200px;
+	  margin-top: 15px;
+	  margin-bottom: 15px;
+	  padding: 1px;
+	  font-size: 16px;
+	  line-height: 1;
+	  border: 1px solid black;
+	  border-radius: 0;
+	  height: 34px;
+	  -webkit-appearance: none;
+	  color: #000;
+	}
+	
+	.checkBoxContainer{
+		 background: transparent;
+		left:0;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+	  width: 20%;
+	  height: 80%;
+	  position: relative;
+	  float: left;
+	  top: 20px;
+	}
+	
+	.checkBoxContainer1{
+		 background: transparent;
+		left:0;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+	  width: 33%;
+	  height: 80%;
+	  position: relative;
+	  float: left;
+	  top: 20px;
+	}
+	
+	input[type="checkbox"] {
+		display:none;
+	}
+	
+	input[type="checkbox"] + label span {
+		display:inline-block;
+		width:19px;
+		height:19px;
+		margin:-1px 4px 0 0;
+		vertical-align:middle;
+		background:url(/assets/check_radio_sheet.png) left top no-repeat;
+		cursor:pointer;
+	}
+	input[type="checkbox"]:checked + label span {
+		background:url(/assets/check_radio_sheet.png) -19px top no-repeat;
+	}
+	
+	@font-face{
+		font-family: Pen;
+		src: url(/assets/Raleway-Thin.ttf);
+	}
+	
+	@font-face{
+		font-family: AbsThick;
+		src: url(/assets/Raleway-Bold.ttf);
+	}
+	
+	@font-face{
+		font-family: Abs;
+		src: url(/assets/AbsoThin.ttf);
+	}
+	
+	@font-face{
+		font-family: RaleReg;
+		src: url(/assets/Raleway-Light.ttf);
+	}
+	
+	@font-face{
+		font-family: RaleMed;
+		src: url(/assets/Raleway-Medium.ttf);
+	}
+	
+	div{
+		font-family: Abs;
+		font-size: 20px;
+	}
+
+	form{
+		display: inline-block;
+		position: relative;
+		left: 5px;
+		vertical-align: top;
+	}
+		
+	</style>
+	
+	<script src="jquery-2.1.3.min.js"></script>
+	<script src="jquery-ui.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#login').on('click',function(){
+					$('.header').toggle('slide',{direction: "up"},500);
+				});
+				$('#cancelButton').on('click',function(){
+					$('.header').toggle('slide',{direction: "up"},500);
+				});
+				$('#rating').on('click',function(){
+					$('#rating').toggle('slide',{direction: "left"},500);
+				});
+				$('#goRating').on('click',function(){
+					$('#rating').toggle('slide',{direction: "left"},500);
+				});
+				$('#year').on('click',function(){
+					$('#year').toggle('slide',{direction: "right"},500);
+				});
+				$('#goYear').on('click',function(){
+					$('#year').toggle('slide',{direction: "right"},500);
+				});
+				$('#platform').on('click', function(){
+					$('#mainPane').toggle('slide', {direction:"right"},500);
+					$('#genrePanel').toggle('slide', {direction:"right"},500);
+				});
+				$('#goPlatform').on('click', function(){
+					$('#mainPane').toggle('slide', {direction:"right"},500);
+					$('#genrePanel').toggle('slide', {direction:"right"},500);
+				});
+				$('#genre').on('click', function(){
+					$('#mainPane').toggle('slide', {direction:"right"},500);
+				});
+				$('#goGenre').on('click', function(){
+					$('#mainPane').toggle('slide', {direction:"right"},500);
+				});
+				$('#goPlatformDeselect').on('click', function(){
+					$('#platformCheck').find('input:checkbox').prop('checked', false);
+				});
+				$('#goPlatformSelect').on('click', function(){
+					console.log('a');
+					$('#platformCheck').find('input:checkbox').prop('checked', true);
+				});
+				$('#goGenreDeselect').on('click', function(){
+					$('#genreCheck').find('input:checkbox').prop('checked', false);
+				});
+				$('#goGenreSelect').on('click', function(){
+					console.log('a');
+					$('#genreCheck').find('input:checkbox').prop('checked', true);
+				});
+			});
+	</script>
+</head>
+<body>
+	<div class = 'container'>
+			<div class = 'photoPane'>
+			<div class = 'bannerText'>
+				<div class = 'textPane'><font color = '#44bfa7'>BEST GAME REVIEW WEBSITE</font></div>
+				<div class = 'smallTextPane'><font color = '#0b5d4d'>LOL CAN'T ARGUE WITH THAT</font></div>
+			</div>
+			</div>
+			<%= form_tag("/search", method: :post, style: "display:inherit; width:100%; left: 0px;", name: "search-form") do %>
+			<div class = 'searchPane'><div class = 'searchQueryPane'>
+				<font color = '#0b5d4d'>LOTS OF GAMES ARE WAITING TO BE CRITIQUED!</font>
+				<div class = 'miniSearchQueryPane'><font color = '#0b5d4d'>Search for a game from our collection</font></div>
+				<div class = 'searchBoxPane'>
+				<%= text_field_tag "name", "", class: "textDesign", size: "25" %>
+				<div class = 'searchButton' onclick='document.forms["search-form"].submit();'><font color = 'white'>Go!</font></div>
+				</div>
+				<br></br>
+				</div>
+			</div>
+			<div class = 'controlPane'>
+			<div class = 'controllerPane'>
+			<div class = 'filterQueryPane'>
+				<font color = '#0b5d4d'>Additional Filters</font>
+			</div>
+				<div class = 'platformPane' id = 'platformPanel'>
+					<table align = 'center' style = 'margin-top: 15px; margin-left: 10%;' id="platformCheck">
+						<tr>
+							<td><input id="check1" type="checkbox" name="platform[]" value="Personal Computer" checked>
+							<label for="check1"><span></span>Personal Computer</label></td>
+							<td><input id="check2" type="checkbox" name="platform[]" value="PlayStation 3" checked>
+							<label for="check2"><span></span>PlayStation 3</label></td>
+							<td><input id="check3" type="checkbox" name="platform[]" value="PlayStation 4" checked>
+							<label for="check3"><span></span>PlayStation 4</label></td>
+							<td><input id="check4" type="checkbox" name="platform[]" value="XBox 360" checked>
+							<label for="check4"><span></span>XBox 360</label></td>
+							<td><input id="check5" type="checkbox" name="platform[]" value="Nintendo 3DS" checked>
+							<label for="check5"><span></span>Nintendo 3DS</label></td>
+						</tr>
+						<tr>
+							<td><input id="check6" type="checkbox" name="platform[]" value="Nintendo DS" checked>
+							<label for="check6"><span></span>Nintendo DS</label></td>
+							<td><input id="check7" type="checkbox" name="platform[]" value="XBox One" checked>
+							<label for="check7"><span></span>XBox One</label></td> 
+							<td><input id="check8" type="checkbox" name="platform[]" value="PlayStation Portable" checked>
+							<label for="check8"><span></span>PlayStation Portable</label></td> 
+							<td><input id="check9" type="checkbox" name="platform[]" value="Wii U" checked>
+							<label for="check9"><span></span>Wii U</label></td>
+							<td><input id="check10" type="checkbox" name="platform[]" value="iOS" checked>
+							<label for="check10"><span></span>iOS</label></td>
+						</tr>
+						<tr>
+							<td><input id="check11" type="checkbox" name="platform[]" value="PlayStation 2" checked>
+							<label for="check11"><span></span>PlayStation 2</label></td> 
+							<td><input id="check12" type="checkbox" name="platform[]" value="Game Boy Advance" checked>
+							<label for="check12"><span></span>Game Boy Advance</label></td>
+							<td><input id="check13" type="checkbox" name="platform[]" value="Nintendo GameCube" checked>
+							<label for="check3"><span></span>Nintendo GameCube</label></td> 
+							<td><input id="check14" type="checkbox" name="platform[]" value="XBox" checked>
+							<label for="check14"><span></span>XBox</label></td> 
+							<td><input id="check15" type="checkbox" name="platform[]" value="Sega Dreamcast"checked>
+							<label for="check15"><span></span>Sega Dreamcast</label></td> 
+						</tr>
+						<tr>
+							<td><input id="check16" type="checkbox" name="platform[]" value="PlayStation" checked>
+							<label for="check16"><span></span>PlayStation</label></td> 
+							<td><input id="check17" type="checkbox" name="platform[]" value="Nintendo 64" checked>
+							<label for="check17"><span></span>Nintendo 64</label></td> 
+							<td><input id="check18" type="checkbox" name="platform[]" value="Sega Genesis" checked>
+							<label for="check18"><span></span>Sega Genesis</label></td>
+							<td><input id="check20" type="checkbox" name="platform[]" value="Sega Game Gear"checked>
+							<label for="check20"><span></span>Sega Game Gear</label></td> 
+							<td><input id="check19" type="checkbox" name="platform[]" value="Turbo Grafx CD"checked>
+							<label for="check19"><span></span>Turbo Grafx CD</label><td> 
+						</tr>
+						<tr>
+							<td><input id="check21" type="checkbox" name="platform[]" value="Nintendo Entertainment System" checked>
+							<label for="check21"><span></span>Nintendo Entertainment System</label></td> 
+							<td><input id="check22" type="checkbox" name="platform[]" value="Commodore 64" checked>
+							<label for="check22"><span></span>Commodore 64</label></td> 
+							<td><input id="check23" type="checkbox" name="platform[]" value="Sega Master System" checked>
+							<label for="check23"><span></span>Sega Master System</label></td>
+							<td><input id="check24" type="checkbox" name="platform[]" value="MSX" checked>
+							<label for="check24"><span></span>MSX</label></td>
+							<td><input id="check25" type="checkbox" name="platform[]" value="Famicom Disk System" checked>
+							<label for="check25"><span></span>Famicom Disk System</label></td> 
+						</tr>
+						<tr>
+							<td><input id="check26" type="checkbox" name="platform[]" value="Atari 2600" checked>
+							<label for="check26"><span></span>Atari 2600</label></td>
+							<td><input id="check27" type="checkbox" name="platform[]" value="Apple II" checked>
+							<label for="check27"><span></span>Apple II</label></td> 
+							<td><input id="check28" type="checkbox" name="platform[]" value="Coleco Vision" checked>
+							<label for="check28"><span></span>Coleco Vision</label></td> 
+							<td><input id="check29" type="checkbox" name="platform[]" value="IntelliVision" checked>
+							<label for="check29"><span></span>IntelliVision</label></td>
+							<td><input id="check30" type="checkbox" name="platform[]" value="Atari 8-bit" checked>
+							<label for="check30"><span></span>Atari 8-bit</label></td>
+						</tr>
+				</table>
+				<div class = 'goButton' id = 'goPlatformDeselect'><font color = 'white'>Deselect All</font></div>
+				<div class = 'goButton' id = 'goPlatformSelect'><font color = 'white'>Select All</font></div>
+				<div class = 'goButton' id = 'goPlatform'><font color = 'white'>Done</font></div>
+					</div>
+				</div>				<!-- base panel -->
+				<div class = 'platformPane' id = 'genrePanel'>
+					<table align = 'center' style = "margin-top: 20px; width: 50%; margin-left: 29.5%;" id="genreCheck">
+						<tr>
+							<td><input id="check31" type="checkbox" name="genre[]" value="Shooter" checked>
+							<label for="check32"><span></span>Shooter</label></td>
+							<td><input id="check32" type="checkbox" name="genre[]" value="Action" checked>
+							<label for="check31"><span></span>Action</label></td>
+							<td><input id="check33" type="checkbox" name="genre[]" value="Action-Adventure" checked>
+							<label for="check33"><span></span>Action-Adventure</label></td>
+						</tr>
+						<tr>
+							<td><input id="check34" type="checkbox" name="genre[]" value="Adventure" checked>
+							<label for="check34"><span></span>Adventure</label></td>
+							<td><input id="check35" type="checkbox" name="genre[]" value="Role-playing" checked>
+							<label for="check35"><span></span>Role-playing</label></td> 
+							<td><input id="check37" type="checkbox" name="genre[]" value="Strategy" checked>
+							<label for="check37"><span></span>Strategy</label></td>
+						</tr>
+						<tr>
+							<td><input id="check36" type="checkbox" name="genre[]" value="Simulation" checked>
+							<label for="check36"><span></span>Simulation</label></td>
+							<td><input id="check38" type="checkbox" name="genre[]" value="Sports" checked>
+							<label for="check38"><span></span>Sports</label></td>
+							<td><input id="check39" type="checkbox" name="genre[]" value="Rhythm" checked>
+							<label for="check39"><span></span>Rhythm</label><br></td> 
+						</tr>
+						<tr>
+							<td><input id="check40" type="checkbox" name="genre[]" value="Puzzle" checked>
+							<label for="check40"><span></span>Puzzle</label></td>
+							<td><input id="check41" type="checkbox" name="genre[]" value="Card and Board" checked>
+							<label for="check41"><span></span>Card and Board</label></td>
+						</tr>
+					</table>
+					
+				<div class = 'genreButton' id = 'goGenreDeselect'><font color = 'white'>Deselect All</font></div>
+				<div class = 'genreButton' id = 'goGenreSelect'><font color = 'white'>Select All</font></div>
+				<div class = 'genreButton' id = 'goGenre'><font color = 'white'>Done</font></div>
+				</div>				<!-- base panel -->
+			<div class = 'squareContainerPane' id = 'mainPane'>
+					<div class='squareRelContainer'>
+						<div class='squareAbsPane1'>
+							<div class = 'textBox'>
+								<input class = "textArea" input type="text" size="25" name="YearFrom">
+								<div>to</div>
+								<input class = "textArea" input type="text" size="25" name="YearTo">
+								<br>
+								<div class = 'goButton' id = 'goYear'><font color = 'white'>Done</font></div>
+							</div>
+						</div>
+						<div class='squareAbsPane' id = 'year'>
+							<div class = "gameListBoxIcon">
+								<div class = 'year'></div>
+							</div>
+							<div class = 'genreTextPane'>by</div>
+							<div class = 'genreTypeTextPane'>Year</div>
+						</div>
+					</div>
+					<div class='squareRelPane' id="genre">
+						<div class = "gameListBoxIcon">
+								<div class = 'genre'></div>
+							</div>
+							<div class = 'genreTextPane'>by</div>
+							<div class = 'genreTypeTextPane'>Genre</div>
+					</div>
+					<div class='squareRelPane' id="platform">
+						<div class = "gameListBoxIcon">
+							<div class = 'console'></div>
+						</div>
+						<div class = 'genreTextPane'>by</div>
+						<div class = 'genreTypeTextPane'>Platform</div>
+					</div>
+					<div class='squareRelContainer'>
+						<div class='squareAbsPane1'>
+							<div class = 'textBox'>
+								<select id = "dropdown" class = "dropDesign" name="RatingFrom">
+									<option value = "0" selected>0%</option>
+									<option value = "10">10%</option>
+									<option value = "20">20%</option>
+									<option value = "30">30%</option>
+									<option value = "40">40%</option>
+									<option value = "50">50%</option>
+									<option value = "60">60%</option>
+									<option value = "70">70%</option>
+									<option value = "80">80%</option>
+									<option value = "90">90%</option>
+									<option value = "100">100%</option>
+								</select>
+								<div>to</div>
+								<select id = "dropdown2" class = "dropDesign" name="RatingTo">
+									<option value = "0">0%</option>
+									<option value = "10">10%</option>
+									<option value = "20">20%</option>
+									<option value = "30">30%</option>
+									<option value = "40">40%</option>
+									<option value = "50">50%</option>
+									<option value = "60">60%</option>
+									<option value = "70">70%</option>
+									<option value = "80">80%</option>
+									<option value = "90">90%</option>
+									<option value = "100" selected>100%</option>
+								</select>
+								<div class = 'goButton' id = 'goRating'><font color = 'white'>Done</font></div>
+							</div>
+						</div>
+						<div class='squareAbsPane' id = 'rating'>
+							<div class = "gameListBoxIcon">
+								<div class = 'rating'></div>
+							</div>
+							<div class = 'genreTextPane'>by</div>
+							<div class = 'genreTypeTextPane'>Rating</div>
+						</div>
+			</div>
+			</div>
+			</div>
+			<% end %>
+			<div class = 'newsPane'>
+				<div class = 'newsSlidesText'><font color = 'white'>Popular Games</div>
+				<div class = 'newsSlides'>
+				<div class = 'popPane'>
+					<div class = 'popularGamePane'>
+						<div class = 'popularGamePhoto' id = 'popGamePhoto'></div>
+						<script>
+							document.getElementById('popGamePhoto').style.backgroundImage = "url(/assets/lanoire.jpg)";
+						</script>
+						<div class = 'gameText'><font color = '#0b5d4d'>L. A. Noire</font></div>
+					</div>
+					<div class = 'popularGamePane'>
+						<div class = 'popularGamePhoto' id = 'popGamePhoto1'></div>
+						<script>
+							document.getElementById('popGamePhoto1').style.backgroundImage = "url(/assets/portal2.jpg)";
+						</script>
+						<div class = 'gameText'><font color = '#0b5d4d'>Portal</font></div>
+					</div>
+					<div class = 'popularGamePane'>
+						<div class = 'popularGamePhoto' id = 'popGamePhoto2'></div>
+						<script>
+							document.getElementById('popGamePhoto2').style.backgroundImage = "url(/assets/skyrim.png)";
+						</script>
+						<div class = 'gameText'><font color = '#0b5d4d'>Elder Scrolls V: Skyrim</font></div>
+					</div>
+					</div>
+					</font>
+				</div>
+			</div>
+			</div>
+			<% if session[:user_id] == nil %>
+			<div class = 'headerCont'>
+			<div class = 'headerPane'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane'></div>
+				<div class = 'buttonPane'>
+				<%= form_tag("/login", method: :post) do %><font color = '#0b5d4d'>
+						Username:
+						<input name="username" type="text" class = 'textDesign1' id="ratingSummary">
+						Password:
+						<input name="password" type="password" class = 'textDesign1' id="ratingSummary">
+						</font>
+					<input type='submit' class = 'buttonDesign1' id = 'loginButton' value='Login'>
+				<% end %>
+					<div class = 'buttonDesign1' id = 'cancelButton'>Cancel</div>
+				</div>
+			</div>
+			<div class = 'header'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane'></div>
+				<div class = 'buttonPane'>
+					<form name='gamelist-form' action='game_list' method="GET">
+					<div class = 'buttonDesign' onclick ='document.forms["gamelist-form"].submit();'>Game List</div>
+					</form>
+					<form>
+					<div class = 'buttonDesign' id = 'login'>Login</div>
+					</form>
+					<form name='register-form' action='register' method="GET">
+					<div class = 'buttonDesign' onclick ='document.forms["register-form"].submit();'>Register</div>
+					</form>
+				</div>
+				
+					
+			</div>
+			<%  end %>
+			<% if session[:user_id] != nil %>
+			<div class = 'header'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane'></div>
+				<div class = 'buttonPane'>
+					<div class = 'buttonDesign' onclick = "window.location.href='/logout';">Logout</div>
+					<div class = 'buttonDesign' onclick= "window.location.href='/profile';">My Profile</div>
+					<form name='gamelist-form' action='game_list' method="GET">
+					<div class = 'buttonDesign' onclick ='document.forms["gamelist-form"].submit();'>Game List</div>
+					</form>
+				</div>
+				<div class = 'userPane'><div class = 'userText'><font color = 'white'>Welcome, <%= session[:user_name] %></font></div></div>
+			</div>
+			<% end %>
+		</div>
+</body>
+</html>

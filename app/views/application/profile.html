@@ -1,0 +1,812 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+	
+	body{
+		margin: 0px;
+		padding: 0px;
+		background-color: #DBEEEB;
+	}
+	
+	html,body{
+		height:100%;
+	}
+	
+	textarea {
+	   font-family: inherit;
+	   font-size: inherit;
+	   border: none;
+	   color: inherit;
+	   overflow: hidden;
+		outline: none;
+    resize: none;
+	}
+	
+	.container{
+		position: relative;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		background-color: #DBEEEB;
+	}
+	
+	.editPanel{
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.8);
+	}
+	
+	.editPane{
+		display: block;
+		position: relative;
+		width: 100%;
+		top: 50%;
+		transform: 			translateY(-50%);
+	}
+	
+	.editPhotoLogo{
+		position: relative;
+		margin: auto;
+		width: 50px;
+		height: 50px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 50px 50px;
+		background-image: url(/assets/edit.png);
+	}
+	
+	.editPhotoText{
+		position: relative;
+		top: 10px;
+		width: 100%;
+		font-family: AbsThick;
+		font-size: 20px;
+		text-align: center;
+	}
+	
+	.buttonDesign:hover{
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #44bfa7;
+		color: #FFFFF;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 2px;
+	}
+	
+	.currentButton{
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #44bfa7;
+		color: #fffff;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		padding: 2px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 1px;
+	}
+	
+	.buttonPane{
+		position: relative;
+		float: right;
+		right: 80px;
+		height: 50px;
+		top: 50px;
+		margin: auto;
+		text-align: center;	
+	}
+	
+	.buttonDesign{		
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #FFFFFF;
+		color: #0b5d4d;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		padding: 2px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 1px;
+	}
+	
+	.logoPane{
+		position: relative;
+		float: left;
+		top: 2px;
+		bottom: 10px;
+		left: 50px;
+		width: 300px;
+		height: 80px;
+		background-image: url(/assets/logo.png);
+	}
+	
+	.userPane{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		border-radius: 10px;
+		background-color: #00a887;
+	}
+	
+	.userCirclePane{
+		position: relative;
+		float: center;
+		width: 50px;
+		height: 50px;
+		left: 10px;
+		top: 10px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 50px 50px;
+		background-image: url(/assets/circle.png);
+	}
+	
+	.headerLine{
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 10px;
+		background-color: #00a887;
+	}
+	
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100px;
+		background-color: white;
+		width: 100%;
+	}
+
+	.outerTextPane{
+		position: absolute;
+		top: 160px;
+		left: -50%;
+	}
+	
+	.loginPane{
+		position: relative;
+		width: 75%;
+		height: 75%;
+		margin: auto;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.45);
+	}
+	
+	.textPane{
+		position:absolute;
+		left:0;
+		top: 31%;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+		font-size: 40px;
+		font-family: Pen;
+		font-size: 60px;
+		margin: 0 auto;
+	}
+	
+	.smallTextPane{
+		position:absolute;
+		left:0;
+		top: 44%;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+		font-family: AbsThick;
+		font-size: 40px;
+		margin: auto;
+		text-align: center;
+	}
+	
+	.profilePhoto{
+		position: absolute;
+		top: 100px;
+		width: 85%;
+		height: 45%;
+		float: center;
+		margin: 25px;
+		background-image: url(/assets/man337.png);
+		background: contain;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-position: top center;
+	}
+	
+	.trustPane{
+		position: relative;
+		float: left;
+		width: 90%;
+		top: 66%;
+		text-align: right;
+		font-family: RaleReg;
+		font-size: 80px;
+	}
+	
+	.userText{
+		position: relative;
+		float: center;
+		margin: 10px;
+		font-family: RaleReg;
+		font-size: 20px;
+	}
+	
+	.trustText{
+		position: relative;
+		float: left;
+		width: 90%;
+		top: 68%;
+		text-align: right;
+		font-family: AbsThick;
+		font-size: 30px;
+	}
+	
+	.picturePane{
+		height: 100%;
+		width: 25%;
+		position: relative;
+		float: left;
+	}
+	
+	.namePane{
+		font-family: RaleReg;
+		font-size: 60px;
+		width: 100%;
+		left: 0px;
+		position: relative;
+		float: left;
+		text-align: left;
+	}
+	
+	.locationPane{
+		font-family: AbsThick;
+		font-size: 30px;
+		width: 100%;
+		left: 0px;
+		top: -10px;
+		position: relative;
+		float: left;
+		text-align: left;
+	}
+	
+	.aboutMePane{
+		font-family: RaleReg;
+		font-size: 20px;
+		width: 98%;
+		left: 0px;
+		top: 50px;
+		position: relative;
+		float: left;
+		background-color: #DBEEEB; 
+		text-align: left;
+	}
+	
+	::-webkit-scrollbar { 
+    display: none; 
+	}
+	
+	.reviewPane{
+		font-family: RaleMed;
+		font-size: 30px;
+		width: 100%;
+		left: 0px;
+		top: 90px;
+		position: relative;
+		float: left;
+		text-align: left;
+	}
+	
+	.detailPane{
+		width: 75%;
+		top: 14%;
+		position: relative;
+		float: left;
+		background-color: #DBEEEB;
+	}
+
+	@font-face{
+		font-family: Pen;
+		src: url(/assets/Raleway-Thin.ttf);
+	}
+	
+	.reviewEntry{
+		width: 98%;
+		background-color: white;
+		float: left;
+		resize: vertical;
+		margin-top: 20px;
+		position: relative;
+	}
+	
+	.reviewSummary{
+		position: relative;
+		top: 10px;
+		float: center;
+		width: 70%;
+		left: 15px;
+		font-family: RaleReg;
+		font-size: 35px;
+		text-align: left;
+	}
+	
+	.reviewProper{
+		position: relative;
+		top: 35px;
+		float: center;
+		width: 70%;
+		left: 15px;
+		font-family: AbsThick;
+		font-size: 20px;
+		text-align: left;
+	}
+	
+	.reviewDetails{
+		position: relative;
+		float: center;
+		width: 97.5%;
+		left: 15px;
+		text-align: justify;
+		text-justify: inter-word;
+		font-family: RaleReg;
+		font-size: 18px;
+		clear:both;
+		top: 0px;
+		margin-bottom: 20px;
+	}
+	
+	.reviewSummaryPane{
+		top: 15px;
+		position: relative;
+		float: center;
+		width: 99%;
+		height: 5%;
+	}
+
+	.star{
+		height: 50px;
+		width: 50px;
+		margin: 2px;
+		margin-bottom: 0px;
+		position: relative;
+		float: left;
+		background-size: cover;
+		background-position: center;
+		background-image: url(/assets/blueStar.png); 
+	}
+	
+	.ratedStar{
+		height: 50px;
+		width: 50px;
+		margin: 2px;
+		margin-bottom: 0px;
+		position: relative;
+		float: left;
+		background-size: cover;
+		background-position: center;
+		background-image: url(/assets/yellowStar.png); 
+	}
+	
+	.scrollContainer{
+		position: relative;
+		padding: vertical horizontal;
+		width: 100%;
+		height: 88%;
+		margin: auto;
+		background-color: #DBEEEB;
+	}
+
+	.scrollPane{
+		position: relative;
+		padding: vertical horizontal;
+		width: 100%;
+		margin: auto;
+		height: 95%;
+		top: 90px;
+		float: left;
+		line-height: 1em;
+		background-color: #DBEEEB;
+	}
+	
+	.drinkcard-dd1{
+		background-size:contain;
+		background-repeat:no-repeat;
+		display:inline-block;
+		width:50px;height:50px;
+	}
+	
+	.dd-selector input:active +.drinkcard-dd{opacity: .9;}
+	.dd-selector input:checked +.drinkcard-dd{
+		-webkit-filter: none;
+		   -moz-filter: none;
+				filter: none;
+	}
+	.drinkcard-dd{
+		cursor:pointer;
+		background-size:contain;
+		background-repeat:no-repeat;
+		display:inline-block;
+		width:50px;height:50px;
+		-webkit-transition: all 100ms ease-in;
+		   -moz-transition: all 100ms ease-in;
+				transition: all 100ms ease-in;
+		-webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+		   -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+				filter: brightness(1.8) grayscale(1) opacity(.7);
+	}
+	.drinkcard-dd:hover{
+		-webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+		   -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+				filter: brightness(1.2) grayscale(.5) opacity(.9);
+	}
+	
+	.numberPane{
+		position: relative;
+		top: -10px;
+		float: right;
+		width: 100%;
+	}
+
+	.upvote{
+		background-image:url(/assets/upvote.png);
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	
+	.downvote{
+		background-image:url(/assets/downvote.png);
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	
+	.downvoteNumber{
+		font-family: AbsThick;
+		font-size: 20px;
+		position: relative;
+		margin-right: -12px;
+		text-align: center;
+		width: 40%;
+		float: right;
+	}
+	
+	.upvoteNumber{
+		margin-left: -10px;
+		margin-right: 33px;
+		font-family: AbsThick;
+		font-size: 20px;
+		position: relative;
+		float: right;
+		text-align: center;
+		width: 20%;
+	}
+	
+	.votePane{
+		position: relative;
+		top: -40px;
+		float: right;
+		width: 200px;
+	}
+	
+	.positiveVerdictIcon{
+		height: 60px;
+		width: 60px;
+		float: right;
+		top: -35px;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		background-image: url(/assets/positiveRating.png); 
+	}
+	
+	.negativeVerdictIcon{
+		height: 60px;
+		width: 60px;
+		top: -35px;
+		float: right;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		background-image: url(/assets/negativeRating.png); 
+	}
+	
+	.starRating{
+		position: relative;
+		float: right;
+		right: -17px;
+	}
+	
+	.editButton{
+		display: inline-block;
+		margin: 10px auto; 
+		position: absolute;
+		float: center;
+		top: 62%;
+		background: #00a887;
+		color: #FFFFF;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 83%;
+		padding: 0;
+		min-width: 90px;
+		border:5px solid rgba(0,0,0,0);
+		border-radius: 2px;
+		left: 24px;
+	}
+	
+	@font-face{
+		font-family: AbsThick;
+		src: url(/assets/Raleway-Bold.ttf);
+	}
+	
+	@font-face{
+		font-family: AbsThick;
+		src: url(/assets/Raleway-Bold.ttf);
+	}
+	
+	@font-face{
+		font-family: Abs;
+		src: url(/assets/AbsoThin.ttf);
+	}
+	
+	@font-face{
+		font-family: RaleReg;
+		src: url(/assets/Raleway-Light.ttf);
+	}
+	
+	@font-face{
+		font-family: RaleMed;
+		src: url(/assets/Raleway-Medium.ttf);
+	}
+	
+	@font-face{
+		font-family: Cane;
+		src: url(/assets/Pam.ttf);
+	}
+	
+	div{
+		font-family: RaleReg;
+		font-size: 20px;
+	}
+
+	form{
+		display: inline-block;
+		position: relative;
+		left: 5px;
+	}
+		
+	</style>
+	
+	<script src="jquery-2.1.3.min.js"></script>
+	<script src="jquery-ui.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#login').on('click',function(){
+					$('.header').toggle('slide',{direction: "up"},500);
+				});
+				$('#cancelButton').on('click',function(){
+					$('.header').toggle('slide',{direction: "up"},500);
+				});
+				$('#editAboutMe').on('click',function(){
+					$('#text').prop('readOnly', false);
+					$('#text').css("background-color","white");
+					$('.editPanel').css("visibility","visible");
+					$('#saveChanges').css("visibility","visible");
+				});
+				$('#saveChanges').on('click',function(){
+					$('#text').prop('readOnly', true);
+					$('#text').css("background-color","#DBEEEB");
+					$('.editPanel').css("visibility","hidden");
+					$('#saveChanges').css("visibility","hidden");
+				});
+			});
+			
+			var observe;
+			if (window.attachEvent) {
+				observe = function (element, event, handler) {
+					element.attachEvent('on'+event, handler);
+				};
+			}
+			else {
+				observe = function (element, event, handler) {
+					element.addEventListener(event, handler, false);
+				};
+			}
+			function init () {
+				var text = document.getElementById('text');
+				function resize () {
+					text.style.height = 'auto';
+					text.style.height = text.scrollHeight+'px';
+				}
+				/* 0-timeout to get the already changed text */
+				function delayedResize () {
+					window.setTimeout(resize, 0);
+				}
+				observe(text, 'change',  resize);
+				observe(text, 'cut',     delayedResize);
+				observe(text, 'paste',   delayedResize);
+				observe(text, 'drop',    delayedResize);
+				observe(text, 'keydown', delayedResize);
+
+				text.focus();
+				text.select();
+				resize();
+			}
+	</script>
+</head>
+<body onload="init();">
+	<div class = 'container'>
+			<%= form_for @user, html: { multipart: true, style: "display:inherit; height:100%;", name:"user-form"} do |user| %>
+			<div class = 'picturePane'>
+				<div class = 'profilePhoto', id="profpic">
+					<div class = 'editPanel' style = "visibility: hidden;">
+						<div class = 'editPane'>
+							<div class = 'editPhotoLogo' id = 'editPhoto' onclick="$('#profilepicform').click();"></div><div class = 'editPhotoText'><font color = 'white'>
+							Upload a Photo
+							</font></div>
+							<%=user.file_field :profilepicture, id: "profilepicform", style: "visibility: hidden;" %>
+						</div>
+					</div>
+				</div>
+				<% if @user.profilepicture.length != 0 %>
+				<script>
+					$('#profpic').css('background-image','url("<%= @user.profilepicture.url%>")');
+				</script>
+				<% end %>
+				<% if @user.id == session[:user_id] %>
+				<div class = 'editButton' id = 'editAboutMe'><font color = 'white'>Edit Profile</font></div>
+				<div class = 'editButton' id = 'saveChanges' onclick="document.forms['user-form'].submit();" style = "visibility: hidden;"><font color = 'white'>Save Changes</font></div>
+				<% end %>
+				<div class = 'trustText'><font color = '#0b5d4d'>User Rating:</font></div>
+				<div class = 'trustPane'><font color = '#44bfa7'><%= @user.get_average_rating %>%</font></div>
+			</div>
+			<div class = 'detailPane'>
+				<font color = '#44bfa7'>
+					<div class = 'namePane'><%= @user.username %></div>
+				</font>
+				<font color = '#0b5d4d'>
+					<div class = 'locationPane'><%= @user.country%>, member since the <%= @user.created_at.strftime("#{@user.created_at.day.ordinalize} of %B, %Y") %></div>
+					<%=user.text_area :aboutme, :readonly => true, class:"aboutMePane", id:"text"%>
+					<%end%>
+					<div class = 'reviewPane'>Reviews (<%= @user.get_number_of_reviews %>):</div>
+					<div class = 'scrollPane'>
+						<div class = 'scrollContainer'>
+				<% @user.game_reviews.each_with_index do |review, index|%>	
+				<div class = 'reviewEntry'>
+					<div class = 'reviewSummaryPane'>
+					<div class = 'reviewSummary'><font color = '#44bfa7'><%=review.get_gamename%></font></div>
+					<div class = 'reviewProper'><font color = '#0b5d4d'><%=review.summary %></font></div>
+					<div class = 'votePane'>
+					<% if review.user_id != session[:user_id] && session[:user_id] != nil %>
+						<%= form_for @review_rating, html: { multipart: true, name: "rating"+index.to_s} do |rating| %>
+						<%= hidden_field_tag :review_id, review.id %>
+						<div class = 'starRating'>
+							<div class="dd-selector">
+								<%= rating.radio_button :rating, true, :style => "display:none;", :id => "up"+index.to_s%>
+								<%= rating.label :rating, :value => true, :class => "drinkcard-dd upvote", :for => "up"+index.to_s%>
+								<%= rating.radio_button :rating, false, :style => "display:none;", :id => "down"+index.to_s%>
+								<%= rating.label :rating, :value => false, :class => "drinkcard-dd downvote", :for => "down"+index.to_s%>
+								<script>
+									$(".drinkcard-dd").html("");
+									$("#up<%=index%>").on('click', function(){
+										document.forms["rating<%=index%>"].submit();
+									});
+									$("#down<%=index%>").on('click', function(){
+										document.forms["rating<%=index%>"].submit();
+									});
+								</script>
+							</div>
+						</div>
+						<% end %>
+					<% end %>
+					<% if review.user_id == session[:user_id] || session[:user_id] == nil %>
+					<div class = 'starRating'>
+						<div class="dd-selector">
+							<label class="drinkcard-dd1 upvote" for="upvote"></label>
+							<label class="drinkcard-dd1 downvote"for="downvote"></label>
+						</div>
+					</div>
+					</form>
+					<% end %>
+					<font color = '#0b5d4d'>
+					<div class = 'numberPane'>
+					<div class = 'downvoteNumber'><%=review.get_negative_ratings %></div>
+					<div class = 'upvoteNumber'><%=review.get_positive_ratings %></div>
+					</div>
+					</font>
+					</div>
+					<% if review.rating %>
+					<div class = 'positiveVerdictIcon'></div>
+					<% end %>
+					<% if !review.rating %>
+					<div class = 'negativeVerdictIcon'></div>
+					<% end %>
+					</div>
+					<font color = '#0b5d4d'>
+					<div class = 'reviewDetails'><%=review.review %>
+					</div></font>
+				</div>
+				<% end %>	
+						</div>
+					</div>
+				</font>
+				<br>
+			</div>
+
+		</div>
+		<% if session[:user_id] == nil %>
+			<div class = 'headerCont'>
+			<div class = 'headerPane'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane'></div>
+				<div class = 'buttonPane'>
+				<%= form_tag("/login", method: :post, id: "form1") do %><font color = '#0b5d4d'>
+						Username:
+						<input name="username" type="text" class = 'textDesign1' id="ratingSummary">
+						Password:
+						<input name="password" type="password" class = 'textDesign1' id="ratingSummary">
+						</font>
+					<input type='submit' class = 'buttonDesign1' id = 'loginButton' value='Login'>
+				<% end %>
+					<div class = 'buttonDesign1' id = 'cancelButton1'>Cancel</div>
+				</div>
+			</div>
+			<div class = 'header'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane' onclick="document.location.href='/'"></div>
+				<div class = 'buttonPane'>
+					<form name='gamelist-form' action='game_list' method="GET", id="form1">
+					<div class = 'buttonDesign' onclick ='document.forms["gamelist-form"].submit();'>Game List</div>
+					</form>
+					<form id="form1">
+					<div class = 'buttonDesign' id = 'login'>Login</div>
+					</form id="form1">
+					<form name='register-form' action='register' method="GET" id="form1">
+					<div class = 'buttonDesign' onclick ='document.forms["register-form"].submit();'>Register</div>
+					</form>
+				</div>
+				
+					
+			</div>
+			<%  end %>
+			<% if session[:user_id] != nil %>
+			<div class = 'header'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane' onclick="document.location.href='/'"></div>
+				<div class = 'buttonPane'>
+					<div class = 'buttonDesign' onclick = "window.location.href='/logout';">Logout</div>
+					<% if @user.id == session[:user_id]%>
+					<div class = 'currentButton' onclick= "window.location.href='/profile'">My Profile</div>
+					<% end %>
+					<% if @user.id != session[:user_id] %>
+					<div class = 'buttonDesign' onclick= "window.location.href='/profile'">My Profile</div>
+					<% end %>
+					<form name='gamelist-form' action='game_list' method="GET" id="form1">
+					<div class = 'buttonDesign' onclick ='document.forms["gamelist-form"].submit();'>Game List</div>
+					</form>
+				</div>
+				<div class = 'userPane'><div class = 'userText'><font color = 'white'>Welcome, <%= session[:user_name] %></font></div></div>
+			</div>
+			<% end %>
+	</div>
+</body>
+</html>

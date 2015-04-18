@@ -1,0 +1,1208 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="utf-8" http-equiv="encoding">
+<title>Game</title>
+<style>
+			body{
+				margin: 0px;
+				padding: 0px;
+				background-color: #DBEEEB
+			}
+			table {
+				table-layout: fixed;
+			}
+			td{
+				width:50%;
+				vertical-align:top;
+			}
+			.container{
+				position: relative;
+				text-align: center;
+				width: 100%;
+				background-color: #DBEEEB;
+			}
+			.gameCover{
+				background-color: #00c187;
+				width: 100%;
+				position: relative;
+				top: 100px;
+				height: 400px;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+		
+			.rate:hover{
+				color:red;
+			}
+			
+			.starRatingBig{
+				position: relative;
+				top: 50px;
+				margin-left: auto;
+				margin-right: auto; 
+				height: 100px;
+				width: 60%;
+			}
+			
+			.logoPane{
+				position: relative;
+				float: left;
+				top: 2px;
+				bottom: 10px;
+				left: 50px;
+				width: 300px;
+				height: 80px;
+				background-image: url(/assets/logo.png);
+			}
+			
+			.userPane{
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				border-radius: 10px;
+				background-color: #00a887;
+			}
+			
+			.gameDescription{
+				margin-top: 10px;
+				text-align: justify;
+				text-justify: inter-word;
+				font-family: RaleReg;
+				font-size: 20px;
+				float: left;
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 10px;
+			}
+			
+			.headerLine{
+				position: relative;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 10px;
+				background-color: #00a887;
+			}
+			
+			.headerPane {
+		position: absolute;
+		height: 100px;
+		background-color: white;
+		width: 100%;
+	}
+	
+	.headerCont {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100px;
+		background-color: white;
+		width: 100%;
+	}
+			
+			.header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100px;
+				background-color: white;
+				width: 100%;
+			}
+			
+			.buttonDesign1:hover{
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #44bfa7;
+		color: #FFFFF;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 2px;
+	}
+	
+	.buttonDesign1{		
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #FFFFFF;
+		color: #0b5d4d;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		padding: 1px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 1px;
+	}
+	
+			
+			.buttonDesign:hover{
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #44bfa7;
+		color: #FFFFF;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 2px;
+	}
+			
+			.gameList{
+				margin-top: 50px;
+				width: 85%;
+				margin-left: auto;
+				margin-right: auto; 
+				overflow: auto;
+				background: white;
+			}
+			
+			.gameBanner{
+				top: 5px;
+				width: 100%;
+				background: white;
+				position: relative;
+			}
+			
+			.buttonContainer{
+				position: relative;
+				float: center;
+				width: 100%;
+			}
+			
+			.gameListBox{
+				position: relative;
+				float: left;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				margin-left: 2px;
+				margin-right: 2px;
+				width: 49%;
+			}
+			
+			.gameListDetailBox{
+				position: relative;
+				float: left;
+				width: 50%;
+			}
+			
+			.gameListBoxIcon{
+				float: left;
+				margin-top: 2.5px;
+				margin-bottom: 2.5px;
+				margin-left: 15px;
+				margin-right: 15px;
+				width: 30%;
+			}
+			
+			.gameDetails{
+				position: relative;
+				top: 50%;
+				transform: 			translateY(-50%);
+			}
+			
+			.gameListBoxIcon .publisher{
+				background-image: url(/assets/notebook.png);
+				width: 60px;
+				height: 60px;
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			
+			.gameListBoxIcon .developer{
+				background-image: url(/assets/developer.png);
+				width: 60px;
+				height: 60px;
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			
+			.gameListBoxIcon .genre{
+				background-image: url(/assets/genre.png);
+				background-repeat: no-repeat;
+				width: 60px;
+				background-position: center;
+				height: 60px;
+				background-size: contain;
+			}
+			
+			.gameListBoxIcon .rating{
+				background-image: url(/assets/timeTable.png);
+				background-repeat: no-repeat;
+				width: 60px;
+				background-position: center;
+				height: 60px;
+				background-size: contain;
+			}
+			
+			.gameListBoxIcon .console{
+				background-image: url(/assets/gamePad.png);
+				background-repeat: no-repeat;
+				width: 60px;
+				background-position: center;
+				height: 60px;
+				background-size: contain;
+			}
+			
+			.gameListBoxIcon .year{
+				background-image: url(/assets/calendar.png);
+				background-repeat: no-repeat;
+				width: 60px;
+				background-position: center;
+				height: 60px;
+				background-size: contain;
+			}
+			
+			.gameListBoxPublisher{
+				float: left;
+				text-align: left;
+				width: 50%;
+			}
+			
+			.userText{
+				position: relative;
+				float: center;
+				margin: 10px;
+				font-family: 'RaleReg';
+				font-size: 20px;
+			}
+			
+			.textDesign1{
+		width: 200px;
+		position: relative;
+		float: center;
+		padding: 2px;
+		font-family: Normal;
+		font-size: 20px;
+		background: #44bfa7;
+		color: #fff;
+		margin-left: 10px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		text-decoration: none;
+		padding: 4 0em;
+		line-height: 0em;
+	}
+			
+			.gameDetail{
+				position: relative;
+				float: left;
+				font-family: RaleMed;
+				font-size: 27px;
+				width: 100%;
+			}
+			
+			.gameDetailValue{
+				position: relative;
+				width: 100%;
+				float: left;
+				font-family: RaleReg;
+				font-size: 18px;
+			}
+			
+			.gameName{
+				width: 100%;
+				height: 100px;
+				position: absolute;
+				top: 320px;
+				background: rgba(255, 255, 255, 0.45);
+			}
+			
+			.gameNameProper{
+				width: 100%;
+				position: relative;
+				top: 50%;
+				transform: 			translateY(-50%);
+				font-family: AbsThick;
+				font-size: 60px;
+			}
+			
+			.gameRating{
+				background-color: #00c187;
+				width: 1200px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.gameReviews{
+				top: 0px;
+				width: 100%;
+				height: 400px;
+			}
+			
+			.userratingBannerPane{
+				position: relative;
+				float: center;
+				width: 50px;
+				height: 50px;
+				left: 10px;
+				top: 10px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 50px 50px;
+				background-image: url(/assets/circle.png);
+			}
+			
+			
+			.buttonPane{
+				position: absolute;
+				float: right;
+				display: inline-block;
+				right: 1.5%;
+				height: 50px;
+				top: 50px;
+				padding: 2px;
+				margin: auto;
+				text-align: center;	
+			}
+			
+			.buttonPane1{
+				position: relative;
+				float: right;
+				right: 80px;
+				height: 50px;
+				top: 50px;
+				width:50%;
+				padding: 2px;
+				margin: auto;
+				text-align: center;	
+			}
+			
+			.nameHolder{
+				float: left;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				margin-left: 15px;
+				margin-right: 15px;
+				width: 200px;
+				height: 200px;
+				background-color: gray;
+			}
+			.nReviews{
+				margin-top: 40px;
+				background-color: #C8C8C8;
+				width: 1000px;
+				height: 15px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: left;
+			}
+			.ratingsHolder{
+				float: left;
+				text-align: left;
+				background-color: gray;
+				width: 800px;
+				height: 300px;
+			}
+			.starHolder{
+				margin-top: 40px;
+				width: 800px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			#loginButton{
+				height: 61%;
+			}
+			
+	.reviewEntry{
+		top: -5px;
+		position: relative;
+		width: 80%;
+		background-color: white;
+		float: center;
+		margin: auto;
+	}
+	
+	.userReviewName{
+		position: relative;
+		top: 10px;
+		float: center;
+		width: 70%;
+		left: 35px;
+		font-family: RaleReg;
+		font-size: 35px;
+		text-align: left;
+	}
+	
+	.reviewProper{
+		position: relative;
+		top: 10px;
+		float: left;
+		width: 70%;
+		left: 20px;
+		clear: both;
+		font-family: AbsThick;
+		font-size: 20px;
+		text-align: left;
+	}
+	
+	.reviewDetails{
+		position: relative;
+		float: center;
+		width: 97.5%;
+		left: 20px;
+		text-align: justify;
+		text-justify: inter-word;
+		font-family: RaleReg;
+		font-size: 18px;
+		clear:both;
+		top: -10px;
+		margin-bottom: 20px;
+	}
+	
+	.userReviewNamePane{
+		top: 15px;
+		position: relative;
+		float: center;
+		width: 99%;
+		height: 5%;
+	}
+	
+	.gameRatings{
+		width: 100%;
+		position: relative;
+		background-color: #DBEEEB;
+	}
+	
+	.reviewUserIcon{
+		position: relative;
+		float: left;
+		left: 20px;
+		width: 50px;
+		height: 50px;
+		background-size: cover;
+		background-position: center;
+		background-image: url(/assets/man337.png); 
+	}
+
+	.ratedStar{
+		height: 70px;
+		width: 70px;
+		margin: 2px;
+		position: relative;
+		float: right;
+		background-size: cover;
+		background-position: center;
+		background-image: url(/assets/positive.png); 
+	}
+	
+	.positiveVerdictIcon{
+		height: 60px;
+		width: 60px;
+		float: right;
+		top: -50px;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		background-image: url(/assets/positiveRating.png); 
+	}
+	
+	.negativeVerdictIcon{
+		height: 60px;
+		width: 60px;
+		top: -50px;
+		float: right;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		background-image: url(/assets/negativeRating.png); 
+	}
+	
+	.ratingBannerPane{
+		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		-o-perspective: 1000;
+		perspective: 1000;
+		top: 4px;
+		background: #44bfa7;
+		margin-top: 100px;
+		transition: 1s;
+	}
+	
+	.rateTextBanner{
+		width: 100%;
+		font-family: AbsThick;
+		font-size: 40px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	
+	.rateTextDetail{
+		width: 100%;
+		font-family: RaleMed;
+		font-size: 20px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.ratingBanner{
+		position:  relative;
+		float: center;
+		margin: auto;
+		top: 6px;
+		height: 90%;
+		width: 100%;
+	}
+	
+	.ratingBannerPane:hover {
+	  background-color: #0b5d4d;
+	  cursor: pointer;
+	  -webkit-transition: background-color 0.5s ease-out;
+	  -moz-transition: background-color 0.5s ease-out;
+	  -o-transition: background-color 0.5s ease-out;
+	  transition: background-color 0.5s ease-out;
+	}
+	
+	.buttonDesign{		
+		display: block;
+		margin:0 auto; 
+		float: right;
+		background: #FFFFFF;
+		color: #0b5d4d;
+		font-family: Abs;
+		opacity: 1.0;
+		font-size: 25px;
+		width: 150px;
+		padding: 1px;
+		min-width: 90px;
+		border:0.5px solid rgba(0,0,0,0.098);
+		border-radius: 1px;
+	}
+	
+	.buttonDesign2:hover{
+				background: #44bfa7;
+				color: #FFFFF;
+				font-family: Abs;
+				opacity: 1.0;
+				font-size: 25px;
+				width: 150px;
+				min-width: 90px;
+				border:0.5px solid rgba(0,0,0,0.098);
+				border-radius: 2px;
+			}
+			
+			.buttonDesign2{		
+				background: #FFFFFF;
+				color: #0b5d4d;
+				margin: 10px;
+				font-family: Abs;
+				opacity: 1.0;
+				font-size: 25px;
+				width: 150px;
+				padding: 1px;
+				min-width: 90px;
+				border:0.5px solid rgba(0,0,0,0.098);
+				border-radius: 2px;
+			}
+	
+	.textDesign{
+		width: 600px;
+		height: 100px;
+		max-height: 100px;
+		position: relative;
+		float: center;
+		padding: 2px;
+		overflow: auto;
+		line-height: 1em;
+		padding: vertical horizontal;
+		font-family: Normal;
+		font-size: 20px;
+		background: #fff;
+		color: #0b5d4d;
+		top: 20%;
+		border:0.5px solid rgba(0,0,0,0.098);
+		text-decoration: none;
+		padding: 0 1em;
+		line-height: 1em;
+	}
+	
+	.textDesign2{
+		width: 600px;
+		position: relative;
+		float: center;
+		padding: 2px;
+		font-family: Normal;
+		font-size: 20px;
+		background: #fff;
+		color: #0b5d4d;
+		top: 20%;
+		border:0.5px solid rgba(0,0,0,0.098);
+		text-decoration: none;
+		padding: 0 1em;
+		line-height: 1em;
+	}
+	
+	.ratingBannerPane{
+		position:  absolute;
+		top: 0px;
+		width: 100%;
+		margin: auto;
+		height: 100%;
+		 -webkit-transition: background-color 0.5s ease-out;
+	  -moz-transition: background-color 0.5s ease-out;
+	  -o-transition: background-color 0.5s ease-out;
+	  transition: background-color 0.5s ease-out;
+	}
+	
+	.rateButton{
+		width: 100%;
+		position: relative;
+		top: 50%;
+		transform: 			translateY(-50%);
+	}
+	
+	.rateForm{
+		position: absolute;
+		top: 0px;
+		left:0;
+		height: 324px;
+		right:0;
+		margin-left:auto;
+		margin-right:auto;
+		background-color: #85D5C5;
+	}
+	
+	.verdictPane{
+		width: 48%;
+		top: 10px;
+		margin: auto;
+		position: relative;
+		float: left:
+	}
+	
+	.formContainer{
+		position: relative;
+		top: 10px;
+		width: 100%;
+		text-align: center;
+		margin: auto;
+	}
+	
+	.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+	}
+	
+	.thumbsUp{
+		background-image:url(/assets/positive.png);
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+	
+	.thumbsDown{
+		background-image:url(/assets/negative.png);
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+		
+	.upvote{
+		background-image:url(/assets/upvote.png);
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	
+	.downvote{
+		background-image:url(/assets/downvote.png);
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	
+	.downvoteNumber{
+		font-family: AbsThick;
+		font-size: 20px;
+		position: relative;
+		margin-right: -12px;
+		text-align: center;
+		width: 40%;
+		float: right;
+	}
+	
+	.upvoteNumber{
+		margin-left: -10px;
+		margin-right: 33px;
+		font-family: AbsThick;
+		font-size: 20px;
+		position: relative;
+		float: right;
+		text-align: center;
+		width: 20%;
+	}
+	
+	.numberPane{
+		position: relative;
+		top: -10px;
+		float: right;
+		width: 100%;
+	}
+
+	.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+	.cc-selector input:checked +.drinkcard-cc{
+		-webkit-filter: none;
+		   -moz-filter: none;
+				filter: none;
+	}
+	.drinkcard-cc{
+		cursor:pointer;
+		background-size:contain;
+		background-repeat:no-repeat;
+		display:inline-block;
+		width:50px;height:50px;
+		-webkit-transition: all 100ms ease-in;
+		   -moz-transition: all 100ms ease-in;
+				transition: all 100ms ease-in;
+		-webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+		   -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+				filter: brightness(1.8) grayscale(1) opacity(.7);
+	}
+	.drinkcard-cc:hover{
+		-webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+		   -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+				filter: brightness(1.2) grayscale(.5) opacity(.9);
+	}
+	
+	.dd-selector input:active +.drinkcard-dd{opacity: .9;}
+	.dd-selector input:checked +.drinkcard-dd{
+		-webkit-filter: none;
+		   -moz-filter: none;
+				filter: none;
+	}
+	.drinkcard-dd{
+		cursor:pointer;
+		background-size:contain;
+		background-repeat:no-repeat;
+		display:inline-block;
+		width:50px;height:50px;
+		-webkit-transition: all 100ms ease-in;
+		   -moz-transition: all 100ms ease-in;
+				transition: all 100ms ease-in;
+		-webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+		   -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+				filter: brightness(1.8) grayscale(1) opacity(.7);
+	}
+	.drinkcard-dd:hover{
+		-webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+		   -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+				filter: brightness(1.2) grayscale(.5) opacity(.9);
+	}
+
+	/* Extras */
+	a:visited{color:#888}
+	a{color:#444;text-decoration:none;}
+	p{margin-bottom:.3em;}
+	
+	.drinkcard-dd1{
+		background-size:contain;
+		background-repeat:no-repeat;
+		display:inline-block;
+		width:50px;height:50px;
+	}
+	
+	.rateText{
+		font-size: 20px;
+		font-family: RaleMed;
+		text-align: center;
+		margin: auto;
+		width: 100px;
+		border-style: solid;
+		border-color: white;
+		border-width: 2px;
+	}
+	
+	.rateIcon{
+		height: 50px;
+		width: 50px;
+		margin-top: 5px;
+		position: relative;
+		left:0;
+		right:0;
+		margin-bottom: 30px;
+		margin-left:auto;
+		margin-right:auto;
+		background-size: cover;
+		background-position: center;
+		background-image: url(/assets/edit.png); 
+	}
+	
+	.back {
+		-webkit-transform: rotateY(-180deg);
+		-moz-transform: rotateY(-180deg);
+		-o-transform: rotateY(-180deg);
+		-ms-transform: rotateY(-180deg);
+		transform: rotateY(-180deg);
+		
+		background-color: #0b5d4d;
+	}
+	
+	.front {
+		z-index: 2;
+	}
+	
+	.numRating{
+		margin: 2px;
+		margin-left: 10px;
+		margin-right: 10px;
+		position: relative;
+		float: right;
+		font-family: RaleReg;
+		font-size: 60px;
+	}
+	
+	.votePane{
+		position: relative;
+		top: -60px;
+		float: right;
+		width: 200px;
+	}
+	
+	.starRating{
+		position: relative;
+		float: right;
+		right: -17px;
+	}
+	
+	form{
+		font-family: RaleReg;
+		font-size: 20px;
+	}
+	
+	#form1{
+			display: inline-block;
+			position: relative;
+			left: 5px;
+			height: 100%;
+		}
+			
+		@font-face{
+			font-family: Pen;
+			src: url(/assets/Raleway-Thin.ttf);
+		}
+		
+		@font-face{
+			font-family: AbsThick;
+			src: url(/assets/Raleway-Bold.ttf);
+		}
+		
+		@font-face{
+			font-family: Abs;
+			src: url(/assets/AbsoThin.ttf);
+		}
+		
+		@font-face{
+			font-family: RaleReg;
+			src: url(/assets/Raleway-Light.ttf);
+		}
+		
+		@font-face{
+			font-family: AbsThick;
+			src: url(/assets/Raleway-Bold.ttf);
+		}
+		
+		@font-face{
+			font-family: RaleMed;
+			src: url(/assets/Raleway-Medium.ttf);
+		}
+		</style>
+		<script src="jquery-2.1.3.min.js"></script>
+		<script src="jquery-ui.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.ratingBannerPane').on('click',function(){
+					$('.ratingBannerPane').toggle('slide',{direction: "right"},500);
+				});
+				$('#cancelButton').on('click',function(){
+					$('.ratingBannerPane').toggle('slide',{direction: "right"},500);
+				});
+				$('#login').on('click',function(){
+					$('.header').toggle('slide',{direction: "up"},500);
+				});
+				$('#cancelButton1').on('click',function(){
+					$('.header').toggle('slide',{direction: "up"},500);
+				});
+			});
+		</script>
+</head>
+<body>
+	<div class = "container">
+			<div class = "gameCover" style="background: url(<%= @game.gameposter.url%>) no-repeat top center fixed">
+			</div>
+			<div class = "gameName">
+				<div class = 'gameNameProper'><font color = white><%= @game.name %></font></div>
+			</div>
+			<div class = 'gameBanner'>
+			<div class = "gameList">
+			<div class = 'gameListDetailBox'>
+			<table>
+				<tr>
+				<td>
+				<div class = "gameListBox">
+					<div class = "gameListBoxIcon">
+						<div class = 'publisher'></div>
+					</div>
+					<div class = "gameListBoxPublisher">
+						<div class = 'gameDetail'><font color = '#0b5d4d'>Publisher</font></div>
+						<div class = 'gameDetailValue'><font color = '#44bfa7'><%= @game.publisher%></font></div>
+					</div>
+				</div>
+				</td>
+				
+				<td>
+				<div class = "gameListBox">
+					<div class = "gameListBoxIcon">
+						<div class = 'developer'></div>
+					</div>
+					<div class = "gameListBoxPublisher">
+						<div class = 'gameDetail'><font color = '#0b5d4d'>Developer</font></div>
+						<div class = 'gameDetailValue'><font color = '#44bfa7'><%= @game.developer %></font></div>
+					</div>
+				</div>
+				</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<div class = "gameListBox">
+						<div class = "gameListBoxIcon">
+							<div class = 'genre'></div>
+						</div>
+						<div class = "gameListBoxPublisher">
+							<div class = 'gameDetail'><font color = '#0b5d4d'>Genre</font></div>
+							<div class = 'gameDetailValue'><font color = '#44bfa7'><%= @game.genre%></font></div>
+					</div>
+				</div>
+					</td>
+					
+					<td>
+						<div class = "gameListBox">
+					<div class = "gameListBoxIcon">
+						<div class = 'year'></div>
+					</div>
+					<div class = "gameListBoxPublisher">
+						<div class = 'gameDetail'><font color = '#0b5d4d'>Release Date</font></div>
+						<div class = 'gameDetailValue'><font color = '#44bfa7'><%= @game.year %></font></div>
+					</div>
+				</div>
+					</td>
+				</tr>
+					
+				<tr>
+					<td>
+						<div class = "gameListBox">
+					<div class = "gameListBoxIcon">
+						<div class = 'console'></div>
+					</div>
+					<div class = "gameListBoxPublisher">
+						<div class = 'gameDetail'><font color = '#0b5d4d'>Platform</font></div>
+						<div class = 'gameDetailValue'><font color = '#44bfa7'><%= @game.platform %></font></div>
+					</div>
+				</div>
+					</td>
+					
+					<td>
+						<div class = "gameListBox">
+					<div class = "gameListBoxIcon">
+						<div class = 'rating'></div>
+					</div>
+					<div class = "gameListBoxPublisher">
+						<div class = 'gameDetail'><font color = '#0b5d4d'>Rating</font></div>
+						<div class = 'gameDetailValue'><font color = '#44bfa7'><%= @game.get_average_rating %>%</font></div>
+					</div>
+				</div>
+					</td>
+				</tr>
+				</table>
+			</div>
+			<div class = "gameDescription"><font color = '#0b5d4d'>
+				<%= @game.description %>
+			</font></div>
+			</div>
+			</div>
+			<div class = "gameReviews">
+				<%= form_for @game_review, html: { multipart: true } do |review| %>
+				<%= hidden_field_tag :game_id,  @game.id %>
+				<div class = 'ratingBanner'>
+					<div class  = 'rateForm'>
+						<div class = 'verdictPane'>
+							<div class="cc-selector">
+								<%= review.radio_button :rating, true, :style => "display:none;"%>
+								<%= review.label :rating, :value => true, :class => "drinkcard-cc thumbsUp"%>
+								<%= review.radio_button :rating, false, :style => "display:none;"%>
+								<%= review.label :rating, :value => false, :class => "drinkcard-cc thumbsDown"%>
+								<script>
+									$(".drinkcard-cc").html("");
+								</script>
+							</div>
+						</div>
+							<div class = 'formContainer'>
+								<font color = '#0b5d4d'>
+								<%= review.label :summary, "Review Summary (Max. of 50 characters):"%> 
+								<br>
+								<%= review.text_field :summary, :class => "textDesign2"%>
+								<br>
+								<%= review.label :review, "Review:"%> 
+								<br>
+								<%= review.text_area :review, :class => "textDesign", :style=>"resize:none;"%>
+								<br>
+								<br>
+								</font>
+								<div class = 'buttonContainer'>
+									<input type="submit" class = 'buttonDesign2' value="Submit">
+									<input type="button" id='cancelButton' class = 'buttonDesign2' value="Cancel">
+								</div>
+							</div>
+		
+							<div class = 'ratingBannerPane'><font color = 'white'>
+								<div class = 'rateButton'>
+									<div class = 'rateIcon'></div>
+									<div class = 'rateTextBanner'>Worthy or Worthless of Bytes - You decide!</div>
+									<div class = 'rateTextDetail'>Leave a rating and see what other users think of your critique.</div>
+									<div class = 'rateText'>Rate</div>
+								</div>
+								</font>
+							</div>
+					</div>
+				</div>
+				<% end %>
+			</div>
+			
+			<% @game.game_reviews.each_with_index do |review, index|%>	
+				<div class = 'reviewEntry'>
+					<div class = 'userReviewNamePane'>
+					<div class = 'reviewUserIcon', id="review<%=index%>"></div>
+					<% if review.get_user_profilepicture.length != 0 %>
+					<script>
+						$('#review<%=index%>').css('background-image','url("<%= review.get_user_profilepicture.url%>")');
+					</script>
+					<% end %>
+					<%= form_tag("/visit_profile", method: :get, style: "display:inherit;", name: "visit"+index.to_s) do %>
+					<%= hidden_field_tag :user_id, review.user_id %>
+					<div class = 'userReviewName' onclick='document.forms["visit<%=index%>"].submit();'><font color = '#44bfa7'><%=review.get_username%></font></div>
+					<% end %>
+					<div class = 'reviewProper'><font color = '#0b5d4d'><%=review.summary %></font></div>
+					<div class = 'votePane'>
+					<% if review.user_id != session[:user_id] && session[:user_id] != nil %>
+					<%= form_for @review_rating, html: { multipart: true ,name: "rating"+index.to_s} do |rating| %>
+					<%= hidden_field_tag :review_id, review.id %>
+					<div class = 'starRating'>
+						<div class="dd-selector">
+							<%= rating.radio_button :rating, true, :style => "display:none;", :id => "up"+index.to_s%>
+							<%= rating.label :rating, :value => true, :class => "drinkcard-dd upvote", :for => "up"+index.to_s%>
+							<%= rating.radio_button :rating, false, :style => "display:none;", :id => "down"+index.to_s%>
+							<%= rating.label :rating, :value => false, :class => "drinkcard-dd downvote", :for => "down"+index.to_s%>
+							<script>
+								$(".drinkcard-dd").html("");
+								$("#up<%=index%>").on('click', function(){
+									document.forms["rating<%=index%>"].submit();
+								});
+								$("#down<%=index%>").on('click', function(){
+									document.forms["rating<%=index%>"].submit();
+								});
+							</script>
+						</div>
+					</div>
+					<% end %>
+					<% end %>
+					<% if review.user_id == session[:user_id] || session[:user_id] == nil %>
+					<div class = 'starRating'>
+						<div class="dd-selector">
+							<label class="drinkcard-dd1 upvote" for="upvote"></label>
+							<label class="drinkcard-dd1 downvote"for="downvote"></label>
+						</div>
+					</div>
+					</form>
+					<% end %>
+					<font color = '#0b5d4d'>
+					<div class = 'numberPane'>
+					<div class = 'downvoteNumber'><%=review.get_negative_ratings %></div>
+					<div class = 'upvoteNumber'><%=review.get_positive_ratings %></div>
+					</div>
+					</font>
+					</div>
+					<% if review.rating %>
+					<div class = 'positiveVerdictIcon'></div>
+					<% end %>
+					<% if !review.rating %>
+					<div class = 'negativeVerdictIcon'></div>
+					<% end %>
+					</div>
+					<font color = '#0b5d4d'>
+					<div class = 'reviewDetails'><%=review.review %>
+					</div></font>
+				</div>
+				<% end %>	
+				
+			</div>
+			<% if session[:user_id] == nil %>
+			<div class = 'headerCont'>
+			<div class = 'headerPane'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane' onclick="document.location.href='/'"></div>
+				<div class = 'buttonPane'>
+				<%= form_tag("/login", method: :post, id: "form1") do %><font color = '#0b5d4d'>
+						Username:
+						<input name="username" type="text" class = 'textDesign1' id="ratingSummary">
+						Password:
+						<input name="password" type="password" class = 'textDesign1' id="ratingSummary">
+						</font>
+					<input type='submit' class = 'buttonDesign1' id = 'loginButton' value='Login'>
+				<% end %>
+					<div class = 'buttonDesign1' id = 'cancelButton1'>Cancel</div>
+				</div>
+			</div>
+			<div class = 'header'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane'></div>
+				<div class = 'buttonPane'>
+					<form name='gamelist-form' action='game_list' method="GET", id="form1">
+					<div class = 'buttonDesign' onclick ='document.forms["gamelist-form"].submit();'>Game List</div>
+					</form>
+					<form id="form1">
+					<div class = 'buttonDesign' id = 'login'>Login</div>
+					</form id="form1">
+					<form name='register-form' action='register' method="GET" id="form1">
+					<div class = 'buttonDesign' onclick ='document.forms["register-form"].submit();'>Register</div>
+					</form>
+				</div>
+				
+					
+			</div>
+			<%  end %>
+			<% if session[:user_id] != nil %>
+			<div class = 'header'>
+				<div class = 'headerLine'></div>
+				<div class = 'logoPane' onclick="document.location.href='/'"></div>
+				<div class = 'buttonPane'>
+					<div class = 'buttonDesign' onclick = "window.location.href='/logout';">Logout</div>
+					<div class = 'buttonDesign' onclick= "window.location.href='/profile'">My Profile</div>
+					<form name='gamelist-form' action='game_list' method="GET" id="form1">
+					<div class = 'buttonDesign' onclick ='document.forms["gamelist-form"].submit();'>Game List</div>
+					</form>
+				</div>
+				<div class = 'userPane'><div class = 'userText'><font color = 'white'>Welcome, <%= session[:user_name] %></font></div></div>
+			</div>
+			<% end %>
+		
+</body>
+</html>

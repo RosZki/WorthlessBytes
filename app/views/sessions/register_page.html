@@ -1,0 +1,150 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<style>
+		html, body{
+			height: 100%;
+			width: 100%;
+			margin: 0;
+		}
+
+		.container {
+			position: relative;
+			text-align: center;
+			height: 100%;
+			width: 100%;
+			background-color: white;
+		}
+
+		.signUpPane{
+			top: 15%;
+			position: relative;
+			width: 75%;
+			height: 70%;
+			margin: auto;
+		}
+
+		.loginPane{
+			position: relative;
+			width: 100%;
+			height: 70%;
+			margin: auto;
+			text-align: center;
+			}
+		
+		.musicIcon{
+			position: relative;
+			margin: auto;
+			height: 100px;
+			width: 800px;
+			padding: 20px;
+			top: 70px;
+			background-position: center;
+			font-family: Cane;
+			font-size: 90px;
+		}
+
+		.buttonDesign{
+			display: block;
+			margin:0 auto; 
+			opacity: 1.0;
+			font-size: 30px;
+			width: 18%;
+			padding: 2px;
+			min-width: 90px;
+			background: #44bfa7;
+			color: #FFFFF;;
+			font-family: Abs;
+			border:0.5px solid rgba(0,0,0,0.098);
+			border-radius: 2px;
+		}
+
+@font-face{
+		font-family: Pen;
+		src: url(/assets/Raleway-Thin.ttf);
+	}
+	
+	@font-face{
+		font-family: AbsThick;
+		src: url(/assets/Raleway-Bold.ttf);
+	}
+	
+	@font-face{
+		font-family: Abs;
+		src: url(/assets/AbsoThin.ttf);
+	}
+	
+	@font-face{
+		font-family: RaleReg;
+		src: url(/assets/Raleway-Light.ttf);
+	}
+	
+	@font-face{
+		font-family: RaleMed;
+		src: url(/assets/Raleway-Medium.ttf);
+	}
+	
+			@font-face {
+			font-family: Cane;
+			src: url(/assets/CaneletterScript_PersonalUse.otf);
+		}		
+		div {
+			font-family: RaleReg;
+			font-size: 20px;
+		}
+
+		.default {
+		  background: white;
+		}
+
+		form {
+			display: inline-block;
+			position: relative;
+		}
+
+		input{
+		border: 1px black solid;
+		width: 100%;}
+		
+		br { 
+			display: block; 
+			margin-top: 2px; 
+			line-height: 2px; 
+		}
+		
+	</style>
+</head>
+<body>
+	<div class = 'container'>
+			<font color = '#0b5d4d'>
+			<div class = 'musicIcon'><font color = '#44bfa7'>WorthlessBytes</font></div>
+			<div class = 'loginPane'>
+				<div class = 'signUpPane'>
+				<%= form_tag("/register", method: :post, name: "register-form") do %>
+					Username:<br>
+					<%= text_field_tag "username" %>
+					<br>
+					Password:<br>
+					<%= password_field_tag "password" %>
+					<br>
+					Confirm Password:<br>
+					<%= password_field_tag "password_confirm" %>
+					<br>
+					Country:<br>
+					<%= text_field_tag "country" %>
+					<br>
+					<br><br><br>
+				<% end %>
+				<br><br><br>
+				<button class = 'buttonDesign' type="button" onclick = 'document.forms["register-form"].submit();'><font color = 'white'>Submit!</font></button>
+				<br><br><br>
+				<button class = 'buttonDesign' type="button" onclick = 'document.forms["cancel"].submit();'><font color = 'white'>Cancel</font></button>
+				<form name='cancel' action='/' method="GET">
+				</form>
+				</font>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
